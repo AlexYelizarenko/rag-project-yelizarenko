@@ -20,8 +20,9 @@ wheels/
 .coverage
 htmlcov/
 
-# Generated document-processing output
-data/processed/
+# Generated document-processing output (keep empty folder via .gitkeep)
+data/processed/*
+!data/processed/.gitkeep
 
 # IDE / editor
 .vscode/
@@ -44,3 +45,5 @@ Thumbs.db
 
 # Local notes / scratch
 *.log
+notes.txt
+
