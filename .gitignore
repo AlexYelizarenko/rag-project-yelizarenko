@@ -1,0 +1,46 @@
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[oc]
+*.egg-info/
+build/
+dist/
+wheels/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated document-processing output
+data/processed/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Office / LibreOffice (lock files, temp, local docs)
+.~lock.*
+~$*
+*.tmp
+*.docx
+*.doc
+*.odt
+
+# Local notes / scratch
+*.log
