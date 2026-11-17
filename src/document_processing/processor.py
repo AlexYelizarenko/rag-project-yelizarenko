@@ -16,6 +16,7 @@ from document_processing.structure import detect_sections
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_PDF = PROJECT_ROOT / "data" / "raw" / "eu_ai_act.pdf"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"
+JSONL_PATH = PROJECT_ROOT / "reports" / "lab-2" / "chunks.jsonl"
 
 
 def process_pdf(pdf_path=DEFAULT_PDF) -> tuple[list[Document], dict]:
@@ -55,8 +56,10 @@ def main():
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     chunks = [{"page_content": d.page_content, "metadata": d.metadata} for d in documents]
-    (OUTPUT_DIR / "chunks.json").write_text(json.dumps(chunks, ensure_ascii=False, indent=2))
-    (OUTPUT_DIR / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2))
+    (OUTPUT_DIR / "chunks.json").write_text(json.dumps(chunks, ensure_ascii=False, indent=2), encoding="utf-8")
+    (OUTPUT_DIR / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    JSONL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    JSONL_PATH.write_text("".join(json.dumps(c, ensure_ascii=False) + "\n" for c in chunks), encoding="utf-8")
 
     for key, value in summary.items():
         if key not in ("warnings", "longest_chunks"):
@@ -67,7 +70,7 @@ def main():
     print(f"warnings: {len(summary['warnings'])}")
     for warning in summary["warnings"]:
         print(f"  - {warning}")
-    print(f"Saved to {OUTPUT_DIR}")
+    print(f"Saved to {OUTPUT_DIR} and {JSONL_PATH}")
 
 
 if __name__ == "__main__":

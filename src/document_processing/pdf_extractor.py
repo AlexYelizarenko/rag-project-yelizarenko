@@ -1,6 +1,7 @@
 """Extract text lines from the EU AI Act PDF, keeping page numbers and basic formatting."""
 
 import re
+import unicodedata
 from dataclasses import dataclass
 
 import pymupdf
@@ -44,6 +45,7 @@ def extract_lines(pdf_path) -> tuple[list[Line], int, list[str]]:
                     if not spans:
                         continue
                     text = " ".join("".join(s["text"] for s in raw_line["spans"]).split())
+                    text = unicodedata.normalize("NFC", text)
                     top, bottom = raw_line["bbox"][1], raw_line["bbox"][3]
 
                     in_margin = top < TOP_MARGIN or top > BOTTOM_MARGIN
@@ -57,6 +59,13 @@ def extract_lines(pdf_path) -> tuple[list[Line], int, list[str]]:
                     if prev_top is not None and abs(top - prev_top) < 3 and lines[-1].page == page_number:
                         lines[-1].text += " " + text
                         prev_bottom = max(prev_bottom, bottom)
+                        continue
+
+                    # A soft hyphen (U+00AD) at the end of a line marks a word split by the
+                    # layout ("experimenta-" / "tion"); rejoin it into one word.
+                    if lines and lines[-1].text.endswith("\xad"):
+                        lines[-1].text = lines[-1].text[:-1] + text
+                        prev_top, prev_bottom = top, bottom
                         continue
 
                     flags = spans[0]["flags"]

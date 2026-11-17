@@ -1,4 +1,5 @@
 import re
+import unicodedata
 
 import pytest
 from langchain_core.documents import Document
@@ -44,6 +45,23 @@ def test_page_headers_and_footers_removed(result):
     for d in documents:
         assert not re.search(r"\b\d{1,3}/144\b", d.page_content)
         assert "ELI: http://data.europa.eu/eli/reg/2024/1689/oj" not in d.page_content
+
+
+def test_text_is_normalized_and_long_enough(result):
+    documents, _ = result
+    for d in documents:
+        assert len(d.page_content) >= 100, d.metadata["chunk_id"]
+        assert unicodedata.normalize("NFC", d.page_content) == d.page_content
+        assert "\xad" not in d.page_content
+    assert any("experimentation facilities" in d.page_content for d in documents)
+
+
+def test_source_id_and_chunk_index(result):
+    documents, _ = result
+    assert [d.metadata["chunk_index"] for d in documents] == list(range(len(documents)))
+    assert {d.metadata["source_doc_id"] for d in documents} == {"eu_ai_act_2024_1689"}
+    assert documents[0].metadata["chunk_id"] == "intro_1"
+    assert documents[-1].metadata["annex_number"] == "XIII"
 
 
 def test_valid_documents_and_metadata(result):

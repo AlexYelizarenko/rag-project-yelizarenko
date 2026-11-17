@@ -119,7 +119,19 @@ uv run python -m document_processing.processor          # uses data/raw/eu_ai_ac
 uv run pytest                                           # run the tests
 ```
 
-This writes `data/processed/chunks.json` (all chunks with metadata) and `data/processed/summary.json` (page count, chunk counts, parsing warnings).
+This writes:
+
+- `data/processed/chunks.json`: all chunks with metadata, as one JSON array. This is a local working copy and is git-ignored.
+- `data/processed/summary.json`: page count, chunk counts, longest chunks and parsing warnings. Also git-ignored.
+- `reports/lab-2/chunks.jsonl`: the same 540 chunks in JSONL format, one JSON object per line. This is the committed deliverable for Lab 2.
+
+Each JSONL line looks like this:
+
+```json
+{"page_content": "Article 3 – Definitions\n\n(4) ‘deployer’ means ...", "metadata": {"chunk_id": "article_3_def_4", "parent_id": "article_3", "section_type": "article", "page_number": 46, "page_end": 46, "...": "..."}}
+```
+
+The file is UTF-8 (non-ASCII characters such as `’` are stored as-is). It is about 0.8 MB, well below GitHub's 100 MB file limit, so it is committed directly to Git without Git LFS or external storage. It is regenerated on every run of the processor, so it always matches the current pipeline.
 
 Chunking follows the legal structure:
 
@@ -130,20 +142,46 @@ Chunking follows the legal structure:
 | Article 3 (Definitions) | one chunk per definition | `definition_number`, `defined_term` |
 | Annexes I-XIII | one chunk per annex; annexes over 2,000 chars split by numbered points | `annex_number`, `annex_title`, `point` |
 
-Every chunk has `document`, `source`, `section_type`, `chunk_id`, `page_number` and `page_end` (physical 1-based PDF pages). Recitals are marked non-binding because, legally, they explain the regulation but are not binding provisions.
+Every chunk has `document`, `source`, `source_doc_id` (`eu_ai_act_2024_1689`), `section_type`, `chunk_id` (stable global ID), `chunk_index` (position of the chunk in the document, from 0), `page_number` and `page_end` (physical 1-based PDF pages). Recitals are marked non-binding because, legally, they explain the regulation but are not binding provisions.
 
 Article and annex chunks also have `parent_id` (e.g. `article_5`) and `is_partial`. Split pieces (`article_5_part_2`, `article_3_def_4`) repeat a header line such as `Article 5 – Prohibited AI practices`, and all pieces with the same `parent_id` together make up the full article.
+
+### Text cleaning and normalization
+
+The only source is the official EUR-Lex **PDF**, so the cleaning steps are chosen for PDF text:
+
+- **No HTML cleanup.** The text comes from the PDF text layer, not from web pages, so it contains no HTML tags or entities to strip.
+- **Page noise is removed.** Official Journal headers and footers (`EN`, `OJ L, 12.7.2024`, `ELI: …`, `12/144`) are dropped, but only when they sit in the page margin and match a known pattern (`pdf_extractor.py`).
+- **No minimum-length filter.** All 540 chunks are longer than 100 characters (the shortest has 122), so a "drop documents shorter than 100 characters" step would remove nothing. A test checks this, so it fails if a future change produces a shorter chunk.
+- **UTF-8 normalization:**
+  - PyMuPDF returns Python Unicode strings.
+  - Every line is normalized to Unicode NFC (`unicodedata.normalize("NFC", ...)`), so the same character always has one byte representation.
+  - Whitespace is collapsed to single spaces.
+  - Output files are written explicitly as UTF-8 (`encoding="utf-8"`, `ensure_ascii=False`), so characters like `’` and `—` are stored as-is instead of `\u2019` escapes.
+- **Soft hyphens.** The PDF has one soft hyphen (U+00AD), where "experimentation" is split across two lines on page 90. The extractor rejoins such words.
+
+Further normalizations were left out on purpose. We checked the extracted text and found that they are either unnecessary or harmful:
+
+- **NFKC / ligature folding:** NFKC would change 0 characters, and the PDF has no ligatures such as `ﬁ`.
+- **Converting curly quotes and dashes to ASCII:** the regulation marks defined terms with `‘…’` (for example ‘deployer’), and the Article 3 definition splitter relies on them. They are also part of the original legal text, which should stay unchanged for accurate quoting.
+- **Lowercasing, stop-word or punctuation removal, stemming:** these would damage citations such as `Article 6(2)` and point labels like `(a)`. Modern embedding models work better with natural text.
+- **Line-end de-hyphenation (regular `-`):** no line in the extracted text ends with a hyphen, so there is nothing to rejoin.
+
+`reports/lab-2/random_chunks.md` contains 10 randomly chosen chunks for manual inspection. Regenerate it with `uv run python scripts/sample_chunks.py` (fixed seed).
 
 ## Project structure
 
 ```
 RAG_system_LW/
 ├── src/document_processing/
-│   ├── pdf_extractor.py   # PDF -> text lines with page numbers and bold/italic flags
+│   ├── pdf_extractor.py   # PDF -> cleaned, NFC-normalized text lines with page numbers and bold/italic flags
 │   ├── structure.py       # detects chapters, sections, articles and annexes
 │   ├── chunker.py         # turns sections into LangChain Documents with metadata
-│   └── processor.py       # runs the pipeline, writes data/processed/, prints a summary
+│   └── processor.py       # runs the pipeline, writes data/processed/ and reports/lab-2/chunks.jsonl
 ├── tests/                 # tests against the real AI Act PDF
+├── scripts/
+│   └── sample_chunks.py   # writes 10 random chunks to reports/lab-2/ for manual checking
+├── reports/lab-2/         # data card, chunks.jsonl (committed corpus) and random chunk sample
 ├── data/
 │   ├── raw/eu_ai_act.pdf  # official PDF from EUR-Lex
 │   └── processed/         # generated output (git-ignored)

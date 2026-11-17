@@ -9,6 +9,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from document_processing.pdf_extractor import Line
 
 DOCUMENT_NAME = "EU AI Act"
+SOURCE_DOC_ID = "eu_ai_act_2024_1689"
 SOURCE = "Regulation (EU) 2024/1689, OJ L, 12.7.2024"
 
 INTRO_SPLITTER = RecursiveCharacterTextSplitter(
@@ -150,4 +151,9 @@ def build_documents(sections: list[dict]) -> list[Document]:
             # The first piece already starts with the original heading and title.
             content = piece_text if n == 0 else f"{header}\n\n{piece_text}"
             documents.append(Document(page_content=content, metadata=metadata))
+
+    # chunk_id is the stable global ID; chunk_index is the chunk's position in the document.
+    for index, document in enumerate(documents):
+        document.metadata["source_doc_id"] = SOURCE_DOC_ID
+        document.metadata["chunk_index"] = index
     return documents
