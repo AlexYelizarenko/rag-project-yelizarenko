@@ -23,6 +23,8 @@ htmlcov/
 # Generated document-processing output (keep empty folder via .gitkeep)
 data/processed/*
 !data/processed/.gitkeep
+data/embeddings/
+data/index/
 
 # IDE / editor
 .vscode/
