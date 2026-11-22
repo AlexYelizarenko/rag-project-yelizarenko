@@ -1,0 +1,476 @@
+{
+  "best": "binding_only",
+  "experiments": [
+    {
+      "name": "raw_query",
+      "query_prefix": "",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.75,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q15",
+        "q18",
+        "q19"
+      ],
+      "misses_at_10": [
+        "q05",
+        "q07",
+        "q10",
+        "q13",
+        "q19"
+      ]
+    },
+    {
+      "name": "eu_ai_act_prefix",
+      "query_prefix": "EU AI Act: ",
+      "recall_at_5": 0.3,
+      "recall_at_10": 0.45,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q04",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q04",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "name": "regulation_prefix",
+      "query_prefix": "Regulation (EU) 2024/1689: ",
+      "recall_at_5": 0.15,
+      "recall_at_10": 0.25,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "name": "binding_only",
+      "query_prefix": "",
+      "recall_at_5": 0.65,
+      "recall_at_10": 0.8,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q07",
+        "q10",
+        "q13",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q05",
+        "q10",
+        "q19",
+        "q20"
+      ]
+    }
+  ],
+  "notes": "Best setting is chosen by (Recall@10, Recall@5). Exact gold chunk_id required; a neighbouring piece of the same article counts as a miss.",
+  "best_detail": {
+    "name": "binding_only",
+    "recall_at_5": 0.65,
+    "recall_at_10": 0.8,
+    "ranks": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": 6,
+        "top": [
+          "annex_III_part_5",
+          "article_3_def_66",
+          "article_109",
+          "article_104",
+          "article_108",
+          "article_3_def_1",
+          "article_103",
+          "article_3_def_18",
+          "article_106",
+          "article_40_part_1"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 1,
+        "top": [
+          "article_3_def_4",
+          "article_13_part_1",
+          "article_26_part_1",
+          "article_3_def_15",
+          "article_26_part_5",
+          "article_58_part_3",
+          "article_62_part_2",
+          "article_57_part_3",
+          "article_3_def_11",
+          "article_26_part_2"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 1,
+        "top": [
+          "article_2_part_1",
+          "article_108",
+          "article_109",
+          "article_104",
+          "annex_VIII_part_4",
+          "article_103",
+          "article_106",
+          "article_107",
+          "annex_V",
+          "article_112_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "article_60_part_1",
+          "article_2_part_1",
+          "article_3_def_47",
+          "article_88",
+          "article_101_part_2",
+          "article_10_part_4",
+          "article_22_part_1",
+          "article_60_part_4",
+          "article_3_def_56"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_104",
+          "article_103",
+          "article_102",
+          "article_107",
+          "article_106",
+          "article_105",
+          "article_110",
+          "article_40_part_1"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 3,
+        "top": [
+          "article_7_part_1",
+          "article_6_part_1",
+          "article_6_part_2",
+          "annex_III_part_5",
+          "article_7_part_3",
+          "annex_VIII_part_2",
+          "article_60_part_1",
+          "article_26_part_5",
+          "article_14_part_3",
+          "article_43_part_2"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 6,
+        "top": [
+          "article_9_part_1",
+          "article_14_part_1",
+          "article_15_part_2",
+          "article_13_part_2",
+          "article_14_part_2",
+          "annex_III_part_2",
+          "article_60_part_1",
+          "annex_III_part_1",
+          "article_75",
+          "article_5_part_1"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 1,
+        "top": [
+          "article_10_part_2",
+          "article_10_part_4",
+          "article_9_part_2",
+          "article_17_part_1",
+          "article_10_part_1",
+          "article_3_def_29",
+          "article_3_def_30",
+          "article_15_part_2",
+          "article_9_part_1",
+          "article_13_part_2"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 1,
+        "top": [
+          "article_14_part_1",
+          "article_14_part_2",
+          "article_26_part_5",
+          "article_14_part_3",
+          "article_75",
+          "article_26_part_1",
+          "article_10_part_4",
+          "article_21",
+          "article_60_part_1",
+          "article_60_part_4"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "article_14_part_1",
+          "article_9_part_1",
+          "article_25_part_1",
+          "article_60_part_4",
+          "article_6_part_1",
+          "article_14_part_2",
+          "annex_VIII_part_2",
+          "article_60_part_1",
+          "article_26_part_5",
+          "article_9_part_3"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 1,
+        "top": [
+          "article_27_part_1",
+          "article_7_part_2",
+          "annex_III_part_5",
+          "article_14_part_3",
+          "article_50_part_1",
+          "article_7_part_1",
+          "article_86",
+          "article_82",
+          "article_14_part_1",
+          "article_77"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 1,
+        "top": [
+          "article_50_part_1",
+          "article_2_part_3",
+          "article_21",
+          "article_4",
+          "article_14_part_1",
+          "article_13_part_2",
+          "article_6_part_2",
+          "article_14_part_3",
+          "article_26_part_5",
+          "annex_III_part_1"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": 6,
+        "top": [
+          "article_3_def_65",
+          "article_55",
+          "article_52_part_1",
+          "article_52_part_2",
+          "article_90",
+          "article_51",
+          "article_93",
+          "article_14_part_1",
+          "article_3_def_63",
+          "annex_XI_part_1"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 5,
+        "top": [
+          "annex_XI_part_1",
+          "article_3_def_63",
+          "article_54_part_2",
+          "article_3_def_66",
+          "article_53_part_1",
+          "article_53_part_2",
+          "annex_XII",
+          "article_101_part_2",
+          "article_53_part_3",
+          "annex_XIII"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 4,
+        "top": [
+          "article_3_def_55",
+          "article_57_part_2",
+          "article_58_part_1",
+          "article_57_part_1",
+          "article_57_part_3",
+          "article_58_part_2",
+          "article_57_part_4",
+          "article_58_part_3",
+          "article_57_part_5",
+          "article_66"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_3",
+          "article_73_part_2",
+          "article_80_part_1",
+          "article_20",
+          "article_60_part_4",
+          "article_13_part_2",
+          "article_82",
+          "article_21",
+          "article_89"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 1,
+        "top": [
+          "article_86",
+          "article_7_part_2",
+          "article_101_part_2",
+          "article_14_part_2",
+          "article_60_part_1",
+          "article_6_part_2",
+          "article_3_def_1",
+          "article_89",
+          "article_3_def_17",
+          "article_3_def_18"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": 5,
+        "top": [
+          "article_5_part_1",
+          "article_101_part_1",
+          "article_60_part_1",
+          "article_101_part_2",
+          "article_99_part_1",
+          "article_60_part_4",
+          "article_57_part_4",
+          "article_26_part_5",
+          "article_42",
+          "article_73_part_3"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_106",
+          "article_107",
+          "article_102",
+          "article_104",
+          "article_42",
+          "article_103",
+          "article_105",
+          "article_110"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": null,
+        "top": [
+          "article_54_part_2",
+          "article_101_part_2",
+          "article_53_part_2",
+          "article_89",
+          "article_94",
+          "article_1",
+          "annex_XI_part_1",
+          "annex_XII",
+          "article_53_part_3",
+          "article_40_part_1"
+        ]
+      }
+    ]
+  }
+}
