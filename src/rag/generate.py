@@ -1,16 +1,16 @@
-import argparse
 import json
 import os
 import re
-import sys
 
 from dotenv import load_dotenv
+from groq import BadRequestError
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_groq import ChatGroq
 
 from retrieval.index import PROJECT_ROOT
 
-DEFAULT_MODEL = "llama-3.3-70b-versatile"
+# Groq retired the Llama models used in Lab 4; gpt-oss-120b is the largest model left on the free tier.
+DEFAULT_MODEL = "openai/gpt-oss-120b"
 DEFAULT_K = 4
 # Most chunks are <= 2,000 chars; this only cuts the few very long ones (e.g. Article 5) to save tokens.
 MAX_SOURCE_CHARS = 2500
@@ -36,11 +36,48 @@ Reply with a JSON object only, in exactly this format:
 {"answer": "<answer with [n] citations>", "citations": [<numbers of the sources you used>], "sufficient_context": true}"""
 
 
+def model_name():
+    load_dotenv(PROJECT_ROOT / ".env")
+    return os.getenv("GROQ_MODEL", DEFAULT_MODEL)
+
+
+# Simplest keyword guard against direct prompt injection (Lab 5). It is easy to bypass by rephrasing;
+# it only stops the most common attack phrasings and obvious off-topic or leaked output.
+INJECTION_QUERY_RE = re.compile(
+    r"\bignore\b.{0,30}\b(instructions|rules|prompt)\b|\bsystem prompt\b|\byou are now\b|\bpretend to be\b"
+    r"|^\s*\[\d+\]",
+    re.IGNORECASE | re.MULTILINE,
+)
+BLOCKED_OUTPUT_WORDS = ("recipe", "ingredients", "system prompt", "i am a licensed lawyer", "as your lawyer",
+                        "this is legal advice", "binding legal advice")
+PROMPT_FRAGMENTS = [line[2:42].lower() for line in SYSTEM_PROMPT.splitlines() if line.startswith("- ")]
+BLOCKED_ANSWER = ("I can only explain the EU AI Act based on its text, and this request or answer looked like "
+                  "an attempt to make me do something else, so it was blocked.")
+
+
+def check_query(query):
+    match = INJECTION_QUERY_RE.search(query)
+    return f"query matches injection pattern {match.group(0).strip()!r}" if match else None
+
+
+def check_answer(answer, status="ok"):
+    text = answer.lower()
+    # A refusal may name the off-topic thing ("the sources contain no recipe"), so only answers are word-checked.
+    markers = [*BLOCKED_OUTPUT_WORDS, *PROMPT_FRAGMENTS] if status == "ok" else PROMPT_FRAGMENTS
+    for marker in markers:
+        if marker in text:
+            return f"answer contains {marker!r}"
+    return None
+
+
 def load_llm(model=None):
     load_dotenv(PROJECT_ROOT / ".env")
+    model = model or model_name()
     if not os.getenv("GROQ_API_KEY"):
         raise RuntimeError("GROQ_API_KEY is not set. Put it into .env (see .env.example) or export it.")
-    llm = ChatGroq(model=model or os.getenv("GROQ_MODEL", DEFAULT_MODEL), temperature=0, max_tokens=1024)
+    # max_retries: the groq SDK waits out short 429s (per-minute token limit) using the retry-after header.
+    llm = ChatGroq(model=model, temperature=0, max_tokens=2048, max_retries=4,
+                   reasoning_effort="low" if model.startswith("openai/gpt-oss") else None)
     # Groq JSON mode: the reply is guaranteed to be a JSON object (the prompt must mention JSON).
     return llm.bind(response_format={"type": "json_object"})
 
@@ -84,6 +121,8 @@ def parse_output(raw, n_sources):
     if not isinstance(answer, str) or not answer.strip():
         errors.append('"answer" must be a non-empty string')
         answer = ""
+    # gpt-oss sometimes writes 【1】 instead of [1]; normalise so these markers are validated too.
+    answer = answer.replace("【", "[").replace("】", "]")
     sufficient = data.get("sufficient_context")
     if not isinstance(sufficient, bool):
         errors.append('"sufficient_context" must be true or false')
@@ -126,7 +165,13 @@ def generate(query, chunks, llm=None):
 
     messages = [SystemMessage(SYSTEM_PROMPT), HumanMessage(build_prompt(query, chunks))]
     for _ in range(2):
-        raw = llm.invoke(messages).content
+        try:
+            raw = llm.invoke(messages).content
+        except BadRequestError as error:
+            # Groq JSON mode rejects a reply that is not valid JSON with a 400; treat it like any broken reply.
+            if "json_validate_failed" not in str(error):
+                raise
+            raw = ""
         data, errors = parse_output(raw, len(chunks))
         result["attempts"].append({"raw": raw, "errors": errors})
         if not errors:
@@ -141,26 +186,3 @@ def generate(query, chunks, llm=None):
         ]
     result["retried"] = len(result["attempts"]) > 1
     return result
-
-
-def main(argv=None):
-    from retrieval.search import hybrid_search
-
-    parser = argparse.ArgumentParser(description="Answer a question about the EU AI Act with Groq.")
-    parser.add_argument("query")
-    parser.add_argument("--k", type=int, default=DEFAULT_K, help="sources in the prompt (3-5)")
-    args = parser.parse_args(argv)
-
-    try:
-        llm = load_llm()
-        chunks = hybrid_search(args.query, k=args.k, binding_only=True)
-        result = generate(args.query, chunks, llm=llm)
-    except Exception as error:  # missing/fake API key, network or rate-limit errors from Groq
-        print(f"Error: {error}", file=sys.stderr)
-        return 1
-    print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

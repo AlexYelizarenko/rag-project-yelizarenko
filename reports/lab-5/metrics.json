@@ -1,0 +1,133 @@
+{
+  "recall_at_5": {
+    "all_positive": {
+      "value": 0.774,
+      "n": 31,
+      "hits": 24
+    },
+    "simple": {
+      "value": 0.75,
+      "n": 24,
+      "hits": 18
+    },
+    "multi_chunk_any": {
+      "value": 0.857,
+      "n": 7,
+      "hits": 6
+    },
+    "multi_chunk_all": {
+      "value": 0.571,
+      "n": 7,
+      "hits": 4
+    },
+    "lab3_queries": {
+      "value": 0.7,
+      "n": 20,
+      "hits": 14
+    },
+    "new_queries": {
+      "value": 0.909,
+      "n": 11,
+      "hits": 10
+    }
+  },
+  "answered": {
+    "originals": 36,
+    "of": 36
+  },
+  "valid_citations": {
+    "value": 1.0,
+    "n": 36,
+    "hits": 36
+  },
+  "valid_on_first_attempt": {
+    "value": 1.0,
+    "n": 36,
+    "hits": 36
+  },
+  "correct_refusals": {
+    "value": 1.0,
+    "n": 5,
+    "hits": 5
+  },
+  "correct_refusals_borderline": {
+    "value": 1.0,
+    "n": 2,
+    "hits": 2
+  },
+  "false_refusals": {
+    "value": 0.129,
+    "n": 31,
+    "hits": 4
+  },
+  "uncertain": {
+    "value": 0.0,
+    "n": 36,
+    "hits": 0
+  },
+  "blocked_by_guard": {
+    "value": 0.0,
+    "n": 36,
+    "hits": 0
+  },
+  "ok_answers_citing_gold_chunk": {
+    "value": 0.852,
+    "n": 27,
+    "hits": 23
+  },
+  "key_points_all_present": {
+    "value": 0.704,
+    "n": 27,
+    "hits": 19
+  },
+  "key_points_mean_coverage": 0.849,
+  "mean_seconds_per_answer": 10.57,
+  "metamorphic": {
+    "pairs": 15,
+    "recall_at_5_original": {
+      "value": 0.933,
+      "n": 15,
+      "hits": 14
+    },
+    "recall_at_5_paraphrase": {
+      "value": 0.6,
+      "n": 15,
+      "hits": 9
+    },
+    "recall_flips": [
+      "q02",
+      "q03",
+      "q04",
+      "q13",
+      "m04"
+    ],
+    "top5_jaccard_mean": 0.421,
+    "top1_same": {
+      "value": 0.6,
+      "n": 15,
+      "hits": 9
+    },
+    "cited_pairs": 13,
+    "cited_jaccard_mean": 0.592,
+    "cited_jaccard_per_pair": {
+      "q02": 0.0,
+      "q03": 0.0,
+      "q04": 0.0,
+      "q08": 0.0,
+      "q09": 1.0,
+      "q11": 1.0,
+      "q12": 1.0,
+      "q13": 0.2,
+      "q16": 1.0,
+      "q17": 1.0,
+      "q21": 1.0,
+      "q23": 1.0,
+      "m02": 0.5
+    }
+  },
+  "model": "openai/gpt-oss-120b",
+  "mode": "hybrid",
+  "k": 4,
+  "binding_only": true,
+  "stopped_early": null
+}

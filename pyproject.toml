@@ -35,3 +35,4 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = ["llm: calls the Groq API (answers are cached in reports/lab-5/llm-cache.json); skip with -m 'not llm'"]

@@ -1,0 +1,2073 @@
+[
+ {
+  "id": "q01",
+  "type": "simple",
+  "variant": "original",
+  "query": "What exactly counts as an AI system under the EU AI Act?",
+  "gold": [
+   "article_3_def_1"
+  ],
+  "top5": [
+   "article_3_def_66",
+   "annex_V",
+   "article_2_part_1",
+   "article_75",
+   "annex_IV_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_3_def_66",
+   "annex_V",
+   "article_2_part_1",
+   "article_75"
+  ],
+  "cited": [
+   "article_3_def_66",
+   "article_2_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "machine-based",
+    "autonom",
+    "infer"
+   ],
+   0
+  ],
+  "answer": "The sources do not provide the full definition of what counts as an \"AI system\" under the EU AI Act. They only define a \"general‑purpose AI system\" (a system based on a general‑purpose AI model that can serve many purposes) [1] and describe the scope of the regulation for providers, deployers, importers, etc. [3], but they do not contain the basic definition of an AI system itself. Therefore the needed information is missing.",
+  "seconds": 0.88
+ },
+ {
+  "id": "q02",
+  "type": "simple",
+  "variant": "original",
+  "query": "My company uses an AI tool bought from a vendor. Are we a deployer?",
+  "gold": [
+   "article_3_def_4"
+  ],
+  "top5": [
+   "article_3_def_4",
+   "article_13_part_1",
+   "article_25_part_1",
+   "annex_IV_part_1",
+   "article_50_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_3_def_4",
+   "article_13_part_1",
+   "article_25_part_1",
+   "annex_IV_part_1"
+  ],
+  "cited": [
+   "article_3_def_4"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "deployer",
+    "authority",
+    "personal|non-professional"
+   ],
+   3
+  ],
+  "answer": "Yes. Under Article 3 the law defines a ‘deployer’ as any natural or legal person, public authority, agency or other body that uses an AI system under its authority, except when the system is used only for a personal non‑professional activity. Because your company is a legal entity that uses the AI tool in its business operations, it falls within this definition and is therefore a deployer [1].",
+  "seconds": 0.44
+ },
+ {
+  "id": "q03",
+  "type": "simple",
+  "variant": "original",
+  "query": "Does the AI Act apply to a company located outside the EU?",
+  "gold": [
+   "article_2_part_1"
+  ],
+  "top5": [
+   "article_2_part_1",
+   "article_74_part_1",
+   "article_43_part_2",
+   "article_2_part_2",
+   "article_2_part_3"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_2_part_1",
+   "article_74_part_1",
+   "article_43_part_2",
+   "article_2_part_2"
+  ],
+  "cited": [
+   "article_2_part_1",
+   "article_2_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "third countr|outside the eu|outside the union|non-eu",
+    "output"
+   ],
+   2
+  ],
+  "answer": "Yes. The AI Act also reaches companies that are based outside the EU. It applies to providers that place AI systems or general‑purpose AI models on the EU market, even if those providers are established in a third country, and to providers whose AI output is used in the Union (Article 2(1)(a) and (c)) [1]. However, the regulation does not apply to AI systems used solely for military, defence or national‑security purposes, to public authorities of third countries in certain law‑enforcement cooperation, or to AI developed only for scientific research [4].",
+  "seconds": 0.87
+ },
+ {
+  "id": "q04",
+  "type": "simple",
+  "variant": "original",
+  "query": "Do companies have to train their staff who work with AI?",
+  "gold": [
+   "article_4"
+  ],
+  "top5": [
+   "article_4",
+   "article_92_part_1",
+   "article_2_part_1",
+   "article_53_part_2",
+   "article_3_def_55"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_4",
+   "article_92_part_1",
+   "article_2_part_1",
+   "article_53_part_2"
+  ],
+  "cited": [
+   "article_4"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "ai literacy",
+    "staff|employees|personnel"
+   ],
+   2
+  ],
+  "answer": "Yes. The Act requires providers and deployers of AI systems to take measures to ensure that their staff and anyone else who operates or uses the AI have a sufficient level of AI literacy, taking into account their knowledge and the context of use. This means companies must train or otherwise educate their employees who work with AI.[1]",
+  "seconds": 0.68
+ },
+ {
+  "id": "q05",
+  "type": "simple",
+  "variant": "original",
+  "query": "Which uses of AI are completely banned in the EU?",
+  "gold": [
+   "article_5_part_1"
+  ],
+  "top5": [
+   "article_40_part_1",
+   "article_42",
+   "article_49",
+   "article_75",
+   "article_2_part_3"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_40_part_1",
+   "article_42",
+   "article_49",
+   "article_75"
+  ],
+  "cited": [],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "manipulat",
+    "scraping|facial images",
+    "emotion",
+    "biometric"
+   ],
+   0
+  ],
+  "answer": "The provided excerpts do not contain information about which AI uses are completely banned in the EU. The sections quoted cover harmonised standards, presumption of conformity, registration requirements, and market surveillance of general‑purpose AI, but they do not list any prohibited AI applications.",
+  "seconds": 1.03
+ },
+ {
+  "id": "q06",
+  "type": "simple",
+  "variant": "original",
+  "query": "Can an AI system listed in Annex III escape the high-risk rules if it only performs a narrow procedural task?",
+  "gold": [
+   "article_6_part_2"
+  ],
+  "top5": [
+   "article_6_part_2",
+   "article_6_part_1",
+   "article_7_part_1",
+   "article_43_part_2",
+   "article_7_part_3"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_6_part_2",
+   "article_6_part_1",
+   "article_7_part_1",
+   "article_43_part_2"
+  ],
+  "cited": [
+   "article_6_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "narrow procedural task",
+    "significant risk",
+    "profiling"
+   ],
+   2
+  ],
+  "answer": "Yes. Under Article 6, an AI system that is listed in Annex III can be treated as not high‑risk if it meets one of the listed conditions, such as being intended to perform a narrow procedural task. However, the provider must document this assessment before the system is placed on the market or put into service and will still have to register the system under Article 49(2) and provide the documentation to authorities on request. Profiling of natural persons would override this exception and keep the system high‑risk.",
+  "seconds": 10.17
+ },
+ {
+  "id": "q07",
+  "type": "simple",
+  "variant": "original",
+  "query": "Is using AI to screen job applications considered high-risk?",
+  "gold": [
+   "annex_III_part_2"
+  ],
+  "top5": [
+   "annex_III_part_2",
+   "article_6_part_2",
+   "article_6_part_1",
+   "article_9_part_1",
+   "article_14_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "annex_III_part_2",
+   "article_6_part_2",
+   "article_6_part_1",
+   "article_9_part_1"
+  ],
+  "cited": [
+   "annex_III_part_2",
+   "article_6_part_2",
+   "article_6_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "high-risk",
+    "recruitment|selection",
+    "annex iii"
+   ],
+   3
+  ],
+  "answer": "Yes. AI systems that screen job applications fall under the recruitment use cases listed in Annex III, which are automatically classified as high‑risk [1][3]. Even though Article 6 allows a derogation if the system only performs a narrow procedural task, the rule that any AI that does profiling of people is always high‑risk overrides that exception, and screening applications involves profiling candidates. Therefore the system is considered high‑risk [2].",
+  "seconds": 12.82
+ },
+ {
+  "id": "q08",
+  "type": "simple",
+  "variant": "original",
+  "query": "What quality requirements apply to the training data of a high-risk AI system?",
+  "gold": [
+   "article_10_part_2"
+  ],
+  "top5": [
+   "article_17_part_1",
+   "article_10_part_1",
+   "article_10_part_4",
+   "annex_XIII",
+   "article_10_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_17_part_1",
+   "article_10_part_1",
+   "article_10_part_4",
+   "annex_XIII"
+  ],
+  "cited": [
+   "article_10_part_1",
+   "article_10_part_4"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "representative",
+    "error",
+    "complete"
+   ],
+   0
+  ],
+  "answer": "The training data for a high‑risk AI system must meet the quality criteria set out in Article 10.  This means the data sets used for training (as well as for validation and testing) must be managed with proper data‑governance practices.  Specifically, the provider must consider the design choices, how the data were collected and their original purpose (especially for personal data), the processing steps such as annotation, cleaning and enrichment, the assumptions about what the data represent, the availability, quantity and suitability of the data, and any possible biases that could affect health, safety or fundamental rights.  The provider must also put in place measures to detect, prevent and mitigate those biases, and identify any data gaps that could prevent compliance, addressing them accordingly [2].  If the system does not use model‑training techniques, these requirements apply only to the testing data sets [3].",
+  "seconds": 14.98
+ },
+ {
+  "id": "q09",
+  "type": "simple",
+  "variant": "original",
+  "query": "Must a human be able to supervise a high-risk AI system?",
+  "gold": [
+   "article_14_part_1"
+  ],
+  "top5": [
+   "article_14_part_2",
+   "article_14_part_1",
+   "article_75",
+   "article_14_part_3",
+   "article_6_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_14_part_2",
+   "article_14_part_1",
+   "article_75",
+   "article_14_part_3"
+  ],
+  "cited": [
+   "article_14_part_2",
+   "article_14_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "overs",
+    "natural person|human"
+   ],
+   2
+  ],
+  "answer": "Yes. The Act requires that high‑risk AI systems be designed so a natural person can effectively oversee them while they are in use. Article 14(1) says the system must be built with appropriate human‑machine interface tools to allow human oversight, and Article 14(2) states that this oversight must aim to prevent or minimise risks to health, safety or fundamental rights. So a human must be able to supervise the system.",
+  "seconds": 13.7
+ },
+ {
+  "id": "q10",
+  "type": "simple",
+  "variant": "original",
+  "query": "What does a company that uses a high-risk AI system have to do?",
+  "gold": [
+   "article_26_part_1"
+  ],
+  "top5": [
+   "article_25_part_1",
+   "article_6_part_1",
+   "article_17_part_1",
+   "article_75",
+   "article_14_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_25_part_1",
+   "article_6_part_1",
+   "article_17_part_1",
+   "article_75"
+  ],
+  "cited": [
+   "article_25_part_1",
+   "article_17_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "instructions for use",
+    "oversight",
+    "monitor"
+   ],
+   1
+  ],
+  "answer": "A company that uses a high‑risk AI system must make sure the system meets the rules that apply to the provider of that system.  If the company puts its name on the AI, makes a big change to it, or changes its purpose so that it becomes high‑risk, the company is treated as a provider and must follow the provider duties in Article 16 (not quoted here) and set up a quality‑management system.  That system has to be written down and include things like a compliance strategy, design and testing procedures, data‑management rules, a risk‑management plan, post‑market monitoring, incident‑reporting, record‑keeping and clear responsibilities for staff [1][3].  The company also has to cooperate with the original provider if it takes over a system, sharing needed information and technical access to help meet the conformity‑assessment requirements [1].",
+  "seconds": 14.01
+ },
+ {
+  "id": "q11",
+  "type": "simple",
+  "variant": "original",
+  "query": "When does a public body have to assess the impact of an AI system on people's fundamental rights before using it?",
+  "gold": [
+   "article_27_part_1"
+  ],
+  "top5": [
+   "article_27_part_1",
+   "article_7_part_2",
+   "article_77",
+   "article_14_part_1",
+   "article_86"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_27_part_1",
+   "article_7_part_2",
+   "article_77",
+   "article_14_part_1"
+  ],
+  "cited": [
+   "article_27_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "fundamental rights",
+    "public",
+    "before|prior"
+   ],
+   3
+  ],
+  "answer": "A public body must carry out a fundamental‑rights impact assessment before it puts a high‑risk AI system into use if the system falls under Article 6(2) – that is, it is classified as high‑risk – unless the system is meant for the specific area listed in point 2 of Annex III. The duty applies when the deployer is a body governed by public law (or a private entity delivering public services) or when the system is one of the types listed in points 5(b) and 5(c) of Annex III. The assessment must be done before deployment.[1]",
+  "seconds": 13.97
+ },
+ {
+  "id": "q12",
+  "type": "simple",
+  "variant": "original",
+  "query": "Do I have to tell users that they are chatting with an AI and not a human?",
+  "gold": [
+   "article_50_part_1"
+  ],
+  "top5": [
+   "article_50_part_1",
+   "article_14_part_1",
+   "article_6_part_2",
+   "article_13_part_2",
+   "article_75"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_50_part_1",
+   "article_14_part_1",
+   "article_6_part_2",
+   "article_13_part_2"
+  ],
+  "cited": [
+   "article_50_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "inform",
+    "interact",
+    "obvious"
+   ],
+   3
+  ],
+  "answer": "Yes. If you provide an AI system that people chat with, you must make sure the users know they are interacting with an AI, unless it would be obvious to a reasonably well‑informed, observant and careful person given the situation. This is required by Article 50 of the EU AI Act [1].",
+  "seconds": 15.84
+ },
+ {
+  "id": "q13",
+  "type": "simple",
+  "variant": "original",
+  "query": "When is a general-purpose AI model considered to pose a systemic risk?",
+  "gold": [
+   "article_51"
+  ],
+  "top5": [
+   "article_52_part_1",
+   "article_52_part_2",
+   "article_55",
+   "article_51",
+   "article_90"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_52_part_1",
+   "article_52_part_2",
+   "article_55",
+   "article_51"
+  ],
+  "cited": [
+   "article_52_part_1",
+   "article_52_part_2",
+   "article_51"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "high impact|high-impact",
+    "floating point|flop|10^25|1025|10²⁵",
+    "commission"
+   ],
+   3
+  ],
+  "answer": "A general‑purpose AI model is seen as posing a systemic risk when it is classified as a “general‑purpose AI model with systemic risk.”  This happens in two ways: (1) the model has high‑impact capabilities – for example, if the total computing power used to train it exceeds the threshold of 10^25 floating‑point operations (the “cumulative amount of computation” test) – or meets other technical criteria listed in Annex XIII; or (2) the European Commission, on its own initiative or after a qualified alert from the scientific panel, decides that the model’s capabilities or impact are equivalent to those high‑impact criteria set out in Annex XIII.  Once either condition is met, the model is classified as having systemic risk and must be listed by the Commission.[4][1][2]",
+  "seconds": 13.07
+ },
+ {
+  "id": "q14",
+  "type": "simple",
+  "variant": "original",
+  "query": "What must providers of general-purpose AI models document and make available?",
+  "gold": [
+   "article_53_part_1"
+  ],
+  "top5": [
+   "article_53_part_1",
+   "article_54_part_2",
+   "annex_XI_part_1",
+   "article_53_part_2",
+   "annex_XI_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_53_part_1",
+   "article_54_part_2",
+   "annex_XI_part_1",
+   "article_53_part_2"
+  ],
+  "cited": [
+   "article_53_part_1",
+   "annex_XI_part_1",
+   "article_53_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "technical documentation",
+    "copyright",
+    "summary"
+   ],
+   2
+  ],
+  "answer": "Providers of general‑purpose AI models must create and keep up‑to‑date a technical documentation that describes the model’s training and testing process, evaluation results and the information listed in Annex XI (e.g., description of the model, intended tasks, acceptable‑use policies, release date, distribution method, architecture, number of parameters, input‑output modalities and licence) [1][3]. They must also provide, and keep current, documentation for downstream AI‑system providers that explains the model’s capabilities and limits and includes the items set out in Annex XII, so those users can understand the model and meet their own obligations [1][4]. In addition, they must publish a detailed public summary of the training data content using the AI Office’s template [1].",
+  "seconds": 14.3
+ },
+ {
+  "id": "q15",
+  "type": "simple",
+  "variant": "original",
+  "query": "What is an AI regulatory sandbox and by when must Member States set one up?",
+  "gold": [
+   "article_57_part_1"
+  ],
+  "top5": [
+   "article_3_def_55",
+   "article_57_part_1",
+   "article_58_part_2",
+   "article_57_part_2",
+   "article_57_part_4"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_3_def_55",
+   "article_57_part_1",
+   "article_58_part_2",
+   "article_57_part_2"
+  ],
+  "cited": [
+   "article_3_def_55",
+   "article_57_part_1",
+   "article_57_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "sandbox",
+    "2 august 2026|august 2, 2026|august 2026"
+   ],
+   2
+  ],
+  "answer": "An AI regulatory sandbox is a controlled framework created by a national competent authority where AI providers (or those planning to become providers) can develop, train, test and validate an innovative AI system – even in real‑world conditions – under regulatory supervision for a limited time, according to a sandbox plan agreed with the authority [1][4]. Member States must have at least one national AI regulatory sandbox up and running by 2 August 2026 [2].",
+  "seconds": 10.83
+ },
+ {
+  "id": "q16",
+  "type": "simple",
+  "variant": "original",
+  "query": "How quickly must a provider report a serious incident caused by its high-risk AI system?",
+  "gold": [
+   "article_73_part_1"
+  ],
+  "top5": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_73_part_3",
+   "article_26_part_2",
+   "article_3_def_49"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_73_part_3",
+   "article_26_part_2"
+  ],
+  "cited": [
+   "article_73_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "15 days|fifteen days",
+    "immediately"
+   ],
+   2
+  ],
+  "answer": "A provider must send a report as soon as it knows the AI system caused a serious incident, and in any case no later than 15 days after it becomes aware of the incident. The deadline can be shorter if the incident is very severe: for a widespread infringement or a serious incident of the type listed in Article 3(49)(b) the report must be sent immediately and at most 2 days after awareness, and if a death occurs the report must be sent immediately (once a causal link is suspected) and at most 10 days after awareness. The timing also takes the severity of the incident into account.[1]",
+  "seconds": 11.29
+ },
+ {
+  "id": "q17",
+  "type": "simple",
+  "variant": "original",
+  "query": "Can I ask for an explanation if an AI-based decision affected me?",
+  "gold": [
+   "article_86"
+  ],
+  "top5": [
+   "article_86",
+   "article_5_part_1",
+   "article_7_part_2",
+   "article_3_def_1",
+   "article_3_def_56"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_86",
+   "article_5_part_1",
+   "article_7_part_2",
+   "article_3_def_1"
+  ],
+  "cited": [
+   "article_86"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "explanation",
+    "deployer",
+    "high-risk|annex iii"
+   ],
+   3
+  ],
+  "answer": "Yes. If a decision that was made by a deployer using a high‑risk AI system (listed in Annex III) has a legal effect on you or significantly affects you in a way that harms your health, safety or fundamental rights, you have the right to ask the deployer for a clear and meaningful explanation of how the AI was involved in that decision and what the main elements of the decision were. This right does not apply if Union or national law provides a different rule, or if the right is already covered by another Union law.[1]",
+  "seconds": 13.73
+ },
+ {
+  "id": "q18",
+  "type": "simple",
+  "variant": "original",
+  "query": "What is the maximum fine for using a prohibited AI practice?",
+  "gold": [
+   "article_99_part_1"
+  ],
+  "top5": [
+   "article_101_part_1",
+   "article_5_part_1",
+   "article_56_part_3",
+   "article_57_part_4",
+   "article_53_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_101_part_1",
+   "article_5_part_1",
+   "article_56_part_3",
+   "article_57_part_4"
+  ],
+  "cited": [],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "35 000 000|35 million|35,000,000|35 000 000|35m",
+    "7 %|7%|7 per|7 %"
+   ],
+   0
+  ],
+  "answer": "The provided sources do not specify a maximum fine that applies specifically to the use of a prohibited AI practice. Article 101 only sets fines for providers of general‑purpose AI models, and Article 5 lists prohibited practices but does not attach a penalty amount. Therefore the maximum fine for a prohibited AI practice cannot be determined from the given texts.",
+  "seconds": 14.83
+ },
+ {
+  "id": "q19",
+  "type": "simple",
+  "variant": "original",
+  "query": "From which date do the bans on prohibited AI practices apply?",
+  "gold": [
+   "article_113"
+  ],
+  "top5": [
+   "article_5_part_1",
+   "article_74_part_1",
+   "article_111",
+   "article_96",
+   "article_99_part_1"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_5_part_1",
+   "article_74_part_1",
+   "article_111",
+   "article_96"
+  ],
+  "cited": [],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "2 february 2025|february 2, 2025|february 2025"
+   ],
+   0
+  ],
+  "answer": "The sources do not specify the exact date when the bans on the prohibited AI practices in Article 5 start to apply. The text of Article 5 lists the prohibited practices but does not mention a commencement date, and none of the other cited articles provide that information.",
+  "seconds": 14.84
+ },
+ {
+  "id": "q20",
+  "type": "simple",
+  "variant": "original",
+  "query": "Why are open-source AI models treated differently under the AI Act?",
+  "gold": [
+   "intro_143"
+  ],
+  "top5": [
+   "article_54_part_2",
+   "article_53_part_2",
+   "article_89",
+   "article_53_part_3",
+   "article_55"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_54_part_2",
+   "article_53_part_2",
+   "article_89",
+   "article_53_part_3"
+  ],
+  "cited": [
+   "article_54_part_2",
+   "article_53_part_2"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "open-source|open source",
+    "innovation|research",
+    "systemic"
+   ],
+   3
+  ],
+  "answer": "Open‑source AI models are treated differently because the Act gives them a specific exemption from many of the rules that apply to commercial models. Both Article 53 and Article 54 say that if a general‑purpose AI model is released under a free and open‑source licence – meaning anyone can access, use, modify and distribute it and the model’s parameters, architecture and usage information are publicly available – the provider does not have to follow the usual obligations (such as appointing an authorised representative or complying with certain compliance duties) [1][2]. However, this exemption does not apply when the open‑source model poses \"systemic risks\"; in those cases the normal requirements still kick in. This special treatment reflects the policy goal of encouraging openness and innovation while still protecting society from high‑risk AI systems.",
+  "seconds": 10.06
+ },
+ {
+  "id": "q21",
+  "type": "simple",
+  "variant": "original",
+  "query": "Does the AI Act apply to AI used only for military purposes?",
+  "gold": [
+   "article_2_part_2"
+  ],
+  "top5": [
+   "article_2_part_2",
+   "article_26_part_5",
+   "article_2_part_1",
+   "article_14_part_3",
+   "article_3_def_66"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_2_part_2",
+   "article_26_part_5",
+   "article_2_part_1",
+   "article_14_part_3"
+  ],
+  "cited": [
+   "article_2_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "military",
+    "not apply|does not cover|exclud|outside"
+   ],
+   2
+  ],
+  "answer": "No. The EU AI Act explicitly excludes AI systems that are placed on the market, put into service or used – even with modifications – solely for military, defence or national‑security purposes, regardless of who uses them.[1]",
+  "seconds": 10.71
+ },
+ {
+  "id": "q22",
+  "type": "simple",
+  "variant": "original",
+  "query": "What is a deep fake according to the AI Act?",
+  "gold": [
+   "article_3_def_60"
+  ],
+  "top5": [
+   "article_3_def_60",
+   "article_53_part_1",
+   "article_60_part_2",
+   "annex_III_part_1",
+   "article_50_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_3_def_60",
+   "article_53_part_1",
+   "article_60_part_2",
+   "annex_III_part_1"
+  ],
+  "cited": [
+   "article_3_def_60"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "generated|manipulated",
+    "image|audio|video",
+    "authentic|truthful"
+   ],
+   3
+  ],
+  "answer": "A “deep fake” is an AI‑generated or AI‑manipulated image, audio or video that looks like real people, objects, places, entities or events and would falsely appear to someone as authentic or truthful.[1]",
+  "seconds": 11.12
+ },
+ {
+  "id": "q23",
+  "type": "simple",
+  "variant": "original",
+  "query": "How long must deployers keep the logs of a high-risk AI system?",
+  "gold": [
+   "article_26_part_3"
+  ],
+  "top5": [
+   "article_26_part_3",
+   "article_19",
+   "article_16",
+   "article_12",
+   "article_21"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_26_part_3",
+   "article_19",
+   "article_16",
+   "article_12"
+  ],
+  "cited": [
+   "article_26_part_3"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "six months|6 months"
+   ],
+   1
+  ],
+  "answer": "Deployers must keep the automatically generated logs of a high‑risk AI system for at least six months, unless Union or national law provides a different period (for example, personal‑data protection rules).",
+  "seconds": 9.7
+ },
+ {
+  "id": "q24",
+  "type": "simple",
+  "variant": "original",
+  "query": "How long is a notified body certificate valid for an AI system covered by Annex III?",
+  "gold": [
+   "article_44"
+  ],
+  "top5": [
+   "article_44",
+   "article_36_part_5",
+   "article_36_part_1",
+   "article_36_part_4",
+   "article_43_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_44",
+   "article_36_part_5",
+   "article_36_part_1",
+   "article_36_part_4"
+  ],
+  "cited": [
+   "article_44"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "four years|4 years"
+   ],
+   1
+  ],
+  "answer": "A certificate for an AI system covered by Annex III is valid for up to four years, and it can be extended in further periods of up to four years after a re‑assessment. [1]",
+  "seconds": 10.29
+ },
+ {
+  "id": "m01",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "Our bank wants to use a high-risk AI system to check customers' creditworthiness. What do we have to do before and while using it?",
+  "gold": [
+   "article_26_part_1",
+   "article_27_part_1"
+  ],
+  "top5": [
+   "article_17_part_1",
+   "article_72_part_2",
+   "annex_III_part_2",
+   "article_14_part_1",
+   "article_9_part_1"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_17_part_1",
+   "article_72_part_2",
+   "annex_III_part_2",
+   "article_14_part_1"
+  ],
+  "cited": [
+   "article_17_part_1",
+   "article_72_part_2",
+   "annex_III_part_2",
+   "article_14_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "fundamental rights|impact assessment",
+    "instructions for use",
+    "oversight"
+   ],
+   2
+  ],
+  "answer": "To use a high‑risk AI system for checking customers' creditworthiness, your bank must follow several mandatory steps.\n\n1. **Identify the system as high‑risk** – AI that evaluates creditworthiness is listed in Annex III as a high‑risk AI system (see [3]).\n\n2. **Set up a quality management system (QMS)** – Before the system is placed on the market or put into service, you must have a documented QMS that covers:\n   * a compliance strategy and how you will handle any changes to the system;\n   * design, development, testing and validation procedures;\n   * data‑management processes for the data used to train and run the system;\n   * the risk‑management system required by Article 9;\n   * a post‑market monitoring plan (see below);\n   * procedures for reporting serious incidents and for communicating with authorities;\n   * record‑keeping, resource management and an accountability framework for staff responsibilities.  All these elements are required by Article 17 ([1]).\n\n3. **Implement human oversight** – The system must be designed so that people can effectively supervise it while it is in use. Oversight should aim to prevent or reduce risks to health, safety or fundamental rights, especially if misuse is foreseeable. The measures must match the level of risk, autonomy and context, and can be built into the system by the provider or be implemented by the bank as the deployer ([4]).\n\n4. **Create a post‑market monitoring system and plan** – After the system is deployed, you must continuously monitor its performance, collect data on any issues, and keep the plan up‑to‑date. If your bank already has a monitoring system required by other EU financial‑services rules, you may integrate the AI‑specific elements into that existing system, as long as the same level of protection is achieved ([2]).\n\n5. **Report serious incidents** – If the AI system causes a serious incident (e.g., a major error in credit scoring that harms a customer), you must follow the reporting procedures set out in the QMS ([1] and [2]).\n\nIn summary, before you launch the credit‑scoring AI you need a documented quality management system covering design, data, risk and compliance; ensure human oversight is built in; and have a post‑market monitoring plan (which can be integrated with existing financial‑services monitoring). After deployment, keep the monitoring active, report serious incidents, and maintain all required documentation and communication with authorities.",
+  "seconds": 11.51
+ },
+ {
+  "id": "m02",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "What do providers of general-purpose AI models with systemic risk have to do on top of the obligations that apply to all general-purpose AI providers?",
+  "gold": [
+   "article_53_part_1",
+   "article_55"
+  ],
+  "top5": [
+   "article_55",
+   "article_52_part_2",
+   "article_54_part_2",
+   "article_53_part_2",
+   "article_53_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_55",
+   "article_52_part_2",
+   "article_54_part_2",
+   "article_53_part_2"
+  ],
+  "cited": [
+   "article_55",
+   "article_53_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "documentation",
+    "adversarial|evaluation",
+    "serious incident",
+    "cybersecurity"
+   ],
+   3
+  ],
+  "answer": "Providers of general‑purpose AI models that are classified as having systemic risk must do everything required for all general‑purpose AI providers (the obligations in Articles 53 and 54) **and** add four extra duties.  According to Article 55 they must: (a) carry out model evaluation using up‑to‑date, standardised methods and document adversarial testing to spot and reduce systemic risks; (b) assess and mitigate any systemic risks that could arise at EU level from the model’s development, market placement or use; (c) keep a record of serious incidents and report them promptly to the AI Office and, where appropriate, national authorities; and (d) ensure the model and its physical infrastructure have an adequate level of cybersecurity protection.  These extra steps are required in addition to the baseline obligations in Articles 53 and 54, and providers may use approved codes of practice or European harmonised standards to show compliance until such standards are published.  Providers that rely on open‑source licences are exempt from the basic obligations in Article 53 (a)‑(b), but that exemption does **not** apply when the model is deemed to have systemic risk, so the extra obligations still apply.[1][4]",
+  "seconds": 14.17
+ },
+ {
+  "id": "m03",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "Can an employer use AI to recognise employees' emotions, and where emotion recognition is allowed, what must people be told?",
+  "gold": [
+   "article_5_part_1",
+   "article_50_part_2"
+  ],
+  "top5": [
+   "article_3_def_39",
+   "article_50_part_2",
+   "annex_III_part_1",
+   "article_5_part_1",
+   "article_14_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_3_def_39",
+   "article_50_part_2",
+   "annex_III_part_1",
+   "article_5_part_1"
+  ],
+  "cited": [
+   "article_3_def_39",
+   "article_50_part_2",
+   "annex_III_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "workplace|at work",
+    "medical|safety",
+    "inform"
+   ],
+   1
+  ],
+  "answer": "Yes, an employer can use an AI system that recognises employees' emotions, but only if the use is allowed by Union or national law – emotion‑recognition systems are listed as high‑risk AI under Article 6(2) (see Annex III) [3]. When such a system is deployed, the employer (as the deployer) must inform the employees that the system is operating and that it is analysing their emotions. The information must be given in a clear way and the employer must also handle any personal data according to the EU data‑protection rules (GDPR and related regulations) [2]. The transparency duty does not apply if the system is used for a law‑permitted purpose such as detecting, preventing or investigating a criminal offence, provided appropriate safeguards are in place [2].",
+  "seconds": 15.25
+ },
+ {
+  "id": "m04",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "How do the maximum fines for using a prohibited AI practice compare with the fines for breaking the obligations of deployers?",
+  "gold": [
+   "article_99_part_1",
+   "article_99_part_2"
+  ],
+  "top5": [
+   "article_101_part_1",
+   "article_57_part_4",
+   "article_101_part_2",
+   "article_99_part_2",
+   "article_53_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_101_part_1",
+   "article_57_part_4",
+   "article_101_part_2",
+   "article_99_part_2"
+  ],
+  "cited": [
+   "article_101_part_1",
+   "article_99_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "35 000 000|35 million|35,000,000|35m",
+    "15 000 000|15 million|15,000,000|15m",
+    "7 %|7%",
+    "3 %|3%"
+   ],
+   2
+  ],
+  "answer": "Both the maximum fine for using a prohibited AI practice (as set out for providers of general‑purpose AI models) and the maximum fine for breaching the obligations of deployers can be up to 3 % of the company’s total worldwide annual turnover in the previous financial year or €15 million, whichever is higher. The rule for prohibited practices is in Article 101[1], and the rule for deployer obligations is in Article 99[4].",
+  "seconds": 8.85
+ },
+ {
+  "id": "m05",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "If a distributor puts its own brand on a high-risk AI system, does it become the provider, and what obligations does it then have?",
+  "gold": [
+   "article_25_part_1",
+   "article_16"
+  ],
+  "top5": [
+   "article_25_part_1",
+   "article_24_part_1",
+   "article_24_part_2",
+   "article_3_def_3",
+   "article_89"
+  ],
+  "recall_any": true,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_25_part_1",
+   "article_24_part_1",
+   "article_24_part_2",
+   "article_3_def_3"
+  ],
+  "cited": [
+   "article_25_part_1",
+   "article_24_part_1",
+   "article_24_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "provider",
+    "name or trademark|trademark|brand",
+    "quality management|conformity"
+   ],
+   3
+  ],
+  "answer": "Yes. If a distributor puts its own name or trademark on a high‑risk AI system that is already on the market, it is treated as a \"provider\" of that system for the purposes of the Regulation [1]. As a provider it must comply with the provider duties set out in Article 16 (e.g., ensuring the system meets the high‑risk requirements, keeping technical documentation and conducting conformity assessment). In addition, the distributor still has its own distributor duties: it must check that the system carries the CE mark, has the EU declaration of conformity and user instructions, and that the original provider and any importer have fulfilled their obligations before it makes the system available [2]§1; it must not place a non‑conforming system on the market and must inform the provider or importer if a risk is identified [2]§2‑3; and if it later discovers non‑conformity it must take corrective actions, withdraw or recall the system, and inform the provider, importer and authorities as required [3]§4‑6.",
+  "seconds": 16.12
+ },
+ {
+  "id": "m06",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "Does a company that releases an open-source general-purpose AI model have to prepare the technical documentation, and is there any exception to that?",
+  "gold": [
+   "article_53_part_1",
+   "article_53_part_2"
+  ],
+  "top5": [
+   "article_53_part_2",
+   "annex_XI_part_1",
+   "article_54_part_2",
+   "annex_XII",
+   "article_53_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_53_part_2",
+   "annex_XI_part_1",
+   "article_54_part_2",
+   "annex_XII"
+  ],
+  "cited": [
+   "article_53_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "open-source|open source",
+    "documentation",
+    "systemic risk"
+   ],
+   3
+  ],
+  "answer": "No. The rule that providers must create technical documentation (the obligations in Article 53 (1) (a) and (b)) does not apply to providers that release a general‑purpose AI model under a free and open‑source licence that lets anyone access, use, modify and distribute the model and makes the model’s parameters, architecture and usage information public. This exemption does not apply if the model poses systemic risks, in which case the obligations would still apply. [1]",
+  "seconds": 12.89
+ },
+ {
+  "id": "m07",
+  "type": "multi_chunk",
+  "variant": "original",
+  "query": "What counts as a serious incident, and how fast must a provider of a high-risk AI system report it?",
+  "gold": [
+   "article_3_def_49",
+   "article_73_part_1"
+  ],
+  "top5": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_3_def_49",
+   "article_73_part_3",
+   "article_80_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_3_def_49",
+   "article_73_part_3"
+  ],
+  "cited": [
+   "article_73_part_1",
+   "article_3_def_49"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "death|health",
+    "critical infrastructure",
+    "15 days|fifteen days"
+   ],
+   3
+  ],
+  "answer": "A \"serious incident\" is an incident or malfunction of an AI system that directly or indirectly leads to (a) death of a person or serious health harm, (b) a serious and irreversible disruption of critical infrastructure, (c) an infringement of Union law obligations protecting fundamental rights, or (d) serious harm to property or the environment [3].\n\nProviders of high‑risk AI systems must report a serious incident to the market‑surveillance authority of the Member State where it happened as soon as they have established a causal link (or a reasonable likelihood of one). In any case the report must be sent no later than 15 days after the provider (or, if relevant, the deployer) becomes aware of the incident. The reporting deadline can be shortened depending on the severity:\n- For a widespread infringement or a serious incident of the type in Article 3(49)(b), the report must be sent immediately and no later than 2 days after awareness [1].\n- If the incident involves a death, the report must be sent immediately after a causal relationship is established (or suspected) and no later than 10 days after awareness [1].\n- Providers may first send an incomplete initial report to ensure timeliness, followed by a complete report later [1].",
+  "seconds": 7.02
+ },
+ {
+  "id": "n01",
+  "type": "negative",
+  "variant": "original",
+  "query": "What is a good recipe for a chocolate cake?",
+  "gold": [],
+  "top5": [
+   "article_53_part_1",
+   "article_57_part_4",
+   "article_50_part_1",
+   "article_14_part_2",
+   "article_51"
+  ],
+  "recall_any": null,
+  "recall_all": null,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_53_part_1",
+   "article_57_part_4",
+   "article_50_part_1",
+   "article_14_part_2"
+  ],
+  "cited": [],
+  "cites_gold": null,
+  "key_points": [
+   [],
+   0
+  ],
+  "answer": "I don’t have enough information about chocolate cake recipes in the provided sources.",
+  "seconds": 15.97
+ },
+ {
+  "id": "n02",
+  "type": "negative",
+  "variant": "original",
+  "query": "What will the weather be like in Brussels tomorrow?",
+  "gold": [],
+  "top5": [
+   "article_113",
+   "article_97_part_2",
+   "article_74_part_4",
+   "article_71_part_1",
+   "article_40_part_1"
+  ],
+  "recall_any": null,
+  "recall_all": null,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_113",
+   "article_97_part_2",
+   "article_74_part_4",
+   "article_71_part_1"
+  ],
+  "cited": [],
+  "cites_gold": null,
+  "key_points": [
+   [],
+   0
+  ],
+  "answer": "I don’t have information about the weather in Brussels tomorrow in the provided sources.",
+  "seconds": 5.85
+ },
+ {
+  "id": "n03",
+  "type": "negative",
+  "variant": "original",
+  "query": "Which AI company stocks should I invest in this year?",
+  "gold": [],
+  "top5": [
+   "article_2_part_1",
+   "article_74_part_1",
+   "article_1",
+   "article_60_part_1",
+   "article_57_part_5"
+  ],
+  "recall_any": null,
+  "recall_all": null,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_2_part_1",
+   "article_74_part_1",
+   "article_1",
+   "article_60_part_1"
+  ],
+  "cited": [],
+  "cites_gold": null,
+  "key_points": [
+   [],
+   0
+  ],
+  "answer": "I cannot answer that question because the provided sources only cover the scope, purpose, and enforcement of the EU AI Act and do not contain any information about AI company stocks or investment advice.",
+  "seconds": 9.93
+ },
+ {
+  "id": "n04",
+  "type": "negative",
+  "variant": "original",
+  "query": "What is the maximum fine under the GDPR for a personal data breach?",
+  "gold": [],
+  "top5": [
+   "article_100_part_1",
+   "article_101_part_1",
+   "article_99_part_2",
+   "article_59_part_2",
+   "article_10_part_3"
+  ],
+  "recall_any": null,
+  "recall_all": null,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_100_part_1",
+   "article_101_part_1",
+   "article_99_part_2",
+   "article_59_part_2"
+  ],
+  "cited": [],
+  "cites_gold": null,
+  "key_points": [
+   [],
+   0
+  ],
+  "answer": "The provided sources do not contain information about the GDPR’s maximum fine for a personal data breach, so I cannot answer the question from the given material.",
+  "seconds": 8.47
+ },
+ {
+  "id": "n05",
+  "type": "negative",
+  "variant": "original",
+  "query": "What does the US Blueprint for an AI Bill of Rights require from companies?",
+  "gold": [],
+  "top5": [
+   "article_86",
+   "article_53_part_1",
+   "article_1",
+   "article_43_part_2",
+   "article_91"
+  ],
+  "recall_any": null,
+  "recall_all": null,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_86",
+   "article_53_part_1",
+   "article_1",
+   "article_43_part_2"
+  ],
+  "cited": [],
+  "cites_gold": null,
+  "key_points": [
+   [],
+   0
+  ],
+  "answer": "I don’t have enough information about the US Blueprint for an AI Bill of Rights in the provided sources to answer the question.",
+  "seconds": 10.51
+ },
+ {
+  "id": "q02",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "We bought an AI product from a supplier and use it at work. Does that make us a deployer?",
+  "gold": [
+   "article_3_def_4"
+  ],
+  "top5": [
+   "article_13_part_1",
+   "article_25_part_1",
+   "article_25_part_2",
+   "annex_IV_part_1",
+   "article_2_part_1"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_13_part_1",
+   "article_25_part_1",
+   "article_25_part_2",
+   "annex_IV_part_1"
+  ],
+  "cited": [
+   "article_13_part_1",
+   "article_25_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "deployer",
+    "authority",
+    "personal|non-professional"
+   ],
+   1
+  ],
+  "answer": "Yes. Under the EU AI Act anyone who puts a high‑risk AI system into service – that is, uses it at work – is called a “deployer”. Article 13 talks about the need for transparency so that deployers can understand the system’s output [1]. Article 25 also says that a distributor, importer or other third‑party who uses the system is treated as a provider for the purposes of the regulation, which includes the role of deployer [2].",
+  "seconds": 12.66
+ },
+ {
+  "id": "q03",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Is a non-EU company covered by the EU AI Act?",
+  "gold": [
+   "article_2_part_1"
+  ],
+  "top5": [
+   "article_74_part_1",
+   "article_2_part_3",
+   "article_79_part_3",
+   "article_83",
+   "article_79_part_4"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_74_part_1",
+   "article_2_part_3",
+   "article_79_part_3",
+   "article_83"
+  ],
+  "cited": [
+   "article_74_part_1",
+   "article_2_part_3"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "third countr|outside the eu|outside the union|non-eu",
+    "output"
+   ],
+   1
+  ],
+  "answer": "Yes. The EU AI Act applies to any AI system that is placed on the Union market or put into service in the Union, no matter who the provider is. The law’s definition of “economic operator” (which includes providers) is taken from Article 2 and is applied to all operators identified in that article, so a company based outside the EU that offers an AI system in the EU is treated as an economic operator and must comply with the Act’s requirements. This is confirmed by the market‑surveillance rules that refer to all operators under Article 2(1) as being subject to the same enforcement regime [1][2].",
+  "seconds": 15.66
+ },
+ {
+  "id": "q04",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Is there an obligation under the AI Act to give employees AI training?",
+  "gold": [
+   "article_4"
+  ],
+  "top5": [
+   "article_56_part_2",
+   "article_53_part_1",
+   "article_26_part_1",
+   "article_86",
+   "article_54_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_56_part_2",
+   "article_53_part_1",
+   "article_26_part_1",
+   "article_86"
+  ],
+  "cited": [
+   "article_56_part_2",
+   "article_53_part_1",
+   "article_26_part_1",
+   "article_86"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "ai literacy",
+    "staff|employees|personnel"
+   ],
+   1
+  ],
+  "answer": "The parts of the EU AI Act you provided do not contain any rule that requires employers to give their staff AI training. Article 56 talks about codes of practice and reporting, Article 53 sets obligations for providers of general‑purpose AI models, Article 26 deals with technical and organisational measures for users of high‑risk AI systems, and Article 86 gives a right to explanation for people affected by decisions of high‑risk AI. None of these provisions mention a duty to train employees on AI.",
+  "seconds": 11.9
+ },
+ {
+  "id": "q08",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Which rules govern the data used to train a high-risk AI system?",
+  "gold": [
+   "article_10_part_2"
+  ],
+  "top5": [
+   "article_10_part_2",
+   "article_9_part_1",
+   "article_6_part_1",
+   "article_17_part_1",
+   "annex_XI_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_10_part_2",
+   "article_9_part_1",
+   "article_6_part_1",
+   "article_17_part_1"
+  ],
+  "cited": [
+   "article_10_part_2",
+   "article_17_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "representative",
+    "error",
+    "complete"
+   ],
+   3
+  ],
+  "answer": "The data that are used to train, validate and test a high‑risk AI system are governed by the rules in Article 10 of the EU AI Act. That article says the data sets must be relevant to the intended purpose, sufficiently representative, as error‑free and complete as possible, and have the right statistical properties, including any specific characteristics of the people the system is meant for. It also requires the data to reflect the particular geographical, contextual, behavioural or functional setting where the system will be used [1]. In addition, the quality‑management system that providers must have (Article 17) includes a specific clause on data‑management procedures – covering data acquisition, collection, analysis, labelling, storage, filtering, mining, aggregation and retention – which must be documented and applied to the training data [4].",
+  "seconds": 13.21
+ },
+ {
+  "id": "q09",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Does a high-risk AI system have to allow human supervision?",
+  "gold": [
+   "article_14_part_1"
+  ],
+  "top5": [
+   "article_14_part_2",
+   "article_14_part_1",
+   "article_75",
+   "article_6_part_2",
+   "article_26_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_14_part_2",
+   "article_14_part_1",
+   "article_75",
+   "article_6_part_2"
+  ],
+  "cited": [
+   "article_14_part_2",
+   "article_14_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "overs",
+    "natural person|human"
+   ],
+   2
+  ],
+  "answer": "Yes. The EU AI Act requires that a high‑risk AI system be built so that people who are assigned to oversee it can actually supervise it. Article 14 says the system must be designed with appropriate human‑machine interface tools so that natural persons can effectively oversee it while it is in use [2]. It also obliges the provider to deliver the system to the deployer in a way that lets the overseer understand its capabilities, monitor its operation, avoid over‑reliance, interpret its output, decide to ignore or override it, and even stop the system safely [1]. These rules are binding provisions of the regulation.",
+  "seconds": 10.69
+ },
+ {
+  "id": "q11",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "In which cases must public authorities carry out a fundamental rights impact assessment before deploying an AI system?",
+  "gold": [
+   "article_27_part_1"
+  ],
+  "top5": [
+   "article_27_part_1",
+   "article_27_part_2",
+   "annex_VIII_part_4",
+   "article_7_part_2",
+   "article_7_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_27_part_1",
+   "article_27_part_2",
+   "annex_VIII_part_4",
+   "article_7_part_2"
+  ],
+  "cited": [
+   "article_27_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "fundamental rights",
+    "public",
+    "before|prior"
+   ],
+   3
+  ],
+  "answer": "Public authorities (bodies governed by public law) and private companies that provide public services must do a fundamental‑rights impact assessment before they first use a high‑risk AI system, unless the system is one of the types listed in point 2 of Annex III. The same assessment is also required for deployers of high‑risk AI systems that fall under points 5 (b) and 5 (c) of Annex III. This duty applies to the first use of the system.[1]",
+  "seconds": 10.67
+ },
+ {
+  "id": "q12",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Must people be told when they are talking to an AI chatbot rather than a person?",
+  "gold": [
+   "article_50_part_1"
+  ],
+  "top5": [
+   "annex_III_part_1",
+   "article_50_part_1",
+   "article_6_part_2",
+   "annex_VIII_part_1",
+   "article_5_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "annex_III_part_1",
+   "article_50_part_1",
+   "article_6_part_2",
+   "annex_VIII_part_1"
+  ],
+  "cited": [
+   "article_50_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "inform",
+    "interact",
+    "obvious"
+   ],
+   3
+  ],
+  "answer": "Yes. The Act requires providers to make sure that anyone who interacts directly with an AI system is told that they are dealing with AI, unless it would already be obvious to a reasonably well‑informed, observant and careful person given the circumstances. This is set out in Article 50(1) of the regulation.[2]",
+  "seconds": 15.71
+ },
+ {
+  "id": "q13",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Under what conditions is a general-purpose AI model classified as having systemic risk?",
+  "gold": [
+   "article_51"
+  ],
+  "top5": [
+   "article_52_part_1",
+   "article_90",
+   "article_55",
+   "article_3_def_65",
+   "article_52_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_52_part_1",
+   "article_90",
+   "article_55",
+   "article_3_def_65"
+  ],
+  "cited": [
+   "article_52_part_1",
+   "article_90",
+   "article_3_def_65"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "high impact|high-impact",
+    "floating point|flop|10^25|1025|10²⁵",
+    "commission"
+   ],
+   2
+  ],
+  "answer": "A general‑purpose AI model is classified as having systemic risk when it meets the condition set out in Article 51(1)(a) – i.e., it has the high‑impact capabilities that could cause a significant impact on the EU market or serious negative effects on health, safety, security, fundamental rights or society at large (the definition of “systemic risk” in Article 3[4]). If the provider notices this, it must notify the Commission (Article 52[1]). The Commission can also label a model as presenting systemic risk on its own initiative or after receiving a qualified alert from the scientific panel that the model poses a concrete, identifiable risk (Article 90[2]), using the criteria in Annex XIII. In short, a model is classified as systemic‑risk‑bearing when it meets the Article 51(1)(a) condition and/or when the Commission, prompted by its own assessment or a scientific‑panel alert, designates it as such.",
+  "seconds": 12.27
+ },
+ {
+  "id": "q16",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "What is the deadline for a provider to report a serious incident involving its high-risk AI system?",
+  "gold": [
+   "article_73_part_1"
+  ],
+  "top5": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_73_part_3",
+   "article_26_part_2",
+   "article_3_def_49"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_73_part_1",
+   "article_73_part_2",
+   "article_73_part_3",
+   "article_26_part_2"
+  ],
+  "cited": [
+   "article_73_part_1"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "15 days|fifteen days",
+    "immediately"
+   ],
+   2
+  ],
+  "answer": "A provider must report a serious incident to the market‑surveillance authority as soon as it can link the AI system to the incident, and in any case no later than 15 days after it becomes aware of the incident. If the incident is a widespread infringement or a serious incident of the type listed in Article 3(49)(b), the report must be sent immediately and at most two days after awareness. If the incident involves a death, the report must be sent immediately after a causal link is established (or suspected) and no later than 10 days after awareness.",
+  "seconds": 13.78
+ },
+ {
+  "id": "q17",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Do I have a right to an explanation when a decision about me was made with the help of AI?",
+  "gold": [
+   "article_86"
+  ],
+  "top5": [
+   "article_86",
+   "annex_IV_part_2",
+   "article_89",
+   "article_5_part_1",
+   "article_7_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_86",
+   "annex_IV_part_2",
+   "article_89",
+   "article_5_part_1"
+  ],
+  "cited": [
+   "article_86"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "explanation",
+    "deployer",
+    "high-risk|annex iii"
+   ],
+   2
+  ],
+  "answer": "Yes. If a decision that affects you – for example one that has legal effects or a significant impact on your health, safety or fundamental rights – is made by the AI system that the deployer uses, you can ask the deployer for a clear and meaningful explanation of how the AI was involved and what the main elements of the decision were. This right does not apply if another Union or national law already gives you a similar right, or if the law provides an exception for that AI system.[1]",
+  "seconds": 11.44
+ },
+ {
+  "id": "q18",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "How high can the fine be for engaging in a banned AI practice?",
+  "gold": [
+   "article_99_part_1"
+  ],
+  "top5": [
+   "article_101_part_1",
+   "article_56_part_3",
+   "article_14_part_1",
+   "article_60_part_2",
+   "article_112_part_2"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_101_part_1",
+   "article_56_part_3",
+   "article_14_part_1",
+   "article_60_part_2"
+  ],
+  "cited": [
+   "article_101_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "35 000 000|35 million|35,000,000|35 000 000|35m",
+    "7 %|7%|7 per|7 %"
+   ],
+   0
+  ],
+  "answer": "The EU AI Act says the Commission can fine a provider of a general‑purpose AI model up to 3 % of its total worldwide turnover in the previous financial year, or €15 million, whichever is higher, if it breaches the regulation (including banned practices).",
+  "seconds": 13.67
+ },
+ {
+  "id": "q21",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "Is AI used purely for defence or military purposes covered by the AI Act?",
+  "gold": [
+   "article_2_part_2"
+  ],
+  "top5": [
+   "article_2_part_2",
+   "article_2_part_1",
+   "article_60_part_1",
+   "article_14_part_3",
+   "article_7_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_2_part_2",
+   "article_2_part_1",
+   "article_60_part_1",
+   "article_14_part_3"
+  ],
+  "cited": [
+   "article_2_part_2"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "military",
+    "not apply|does not cover|exclud|outside"
+   ],
+   2
+  ],
+  "answer": "No. The AI Act does not apply to AI systems that are placed on the market, put into service, or used – even with modifications – solely for military, defence or national‑security purposes, regardless of who uses them. This exclusion is set out in Article 2 of the Regulation [1].",
+  "seconds": 9.64
+ },
+ {
+  "id": "q23",
+  "type": "simple",
+  "variant": "paraphrase",
+  "query": "For how long does a deployer have to store the logs generated by a high-risk AI system?",
+  "gold": [
+   "article_26_part_3"
+  ],
+  "top5": [
+   "article_19",
+   "article_26_part_3",
+   "article_12",
+   "article_21",
+   "article_13_part_2"
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_19",
+   "article_26_part_3",
+   "article_12",
+   "article_21"
+  ],
+  "cited": [
+   "article_26_part_3"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "six months|6 months"
+   ],
+   1
+  ],
+  "answer": "A deployer must keep the automatically generated logs for a period that fits the purpose of the AI system, but it must be at least six months unless another Union or national law says otherwise [2].",
+  "seconds": 5.55
+ },
+ {
+  "id": "m02",
+  "type": "multi_chunk",
+  "variant": "paraphrase",
+  "query": "Which additional duties apply to providers of general-purpose AI models that pose systemic risk, compared with other general-purpose AI providers?",
+  "gold": [
+   "article_53_part_1",
+   "article_55"
+  ],
+  "top5": [
+   "article_55",
+   "article_54_part_2",
+   "article_52_part_2",
+   "article_53_part_2",
+   "article_52_part_1"
+  ],
+  "recall_any": true,
+  "recall_all": false,
+  "status": "ok",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_55",
+   "article_54_part_2",
+   "article_52_part_2",
+   "article_53_part_2"
+  ],
+  "cited": [
+   "article_55"
+  ],
+  "cites_gold": true,
+  "key_points": [
+   [
+    "documentation",
+    "adversarial|evaluation",
+    "serious incident",
+    "cybersecurity"
+   ],
+   3
+  ],
+  "answer": "Providers of general‑purpose AI models that are classified as presenting a systemic risk have to do more than the usual duties for all general‑purpose AI providers. In addition to the obligations already set out in Articles 53 and 54, they must (a) carry out model evaluation using up‑to‑date, standardised methods and document adversarial testing to spot and reduce systemic risks; (b) assess and mitigate any systemic risks that could arise at EU level from the model’s development, market placement or use; (c) keep a record of serious incidents and promptly report them to the AI Office and, where appropriate, national authorities, together with any corrective actions; and (d) ensure a sufficient level of cybersecurity for both the model and its physical infrastructure. These extra duties are laid out in Article 55 [1].",
+  "seconds": 11.41
+ },
+ {
+  "id": "m04",
+  "type": "multi_chunk",
+  "variant": "paraphrase",
+  "query": "Compare the highest fine for prohibited AI practices with the highest fine for violating deployer obligations.",
+  "gold": [
+   "article_99_part_1",
+   "article_99_part_2"
+  ],
+  "top5": [
+   "article_101_part_1",
+   "article_26_part_1",
+   "article_26_part_2",
+   "article_86",
+   "article_5_part_1"
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "status": "insufficient_context",
+  "retried": false,
+  "cached": true,
+  "retrieved": [
+   "article_101_part_1",
+   "article_26_part_1",
+   "article_26_part_2",
+   "article_86"
+  ],
+  "cited": [
+   "article_101_part_1"
+  ],
+  "cites_gold": false,
+  "key_points": [
+   [
+    "35 000 000|35 million|35,000,000|35m",
+    "15 000 000|15 million|15,000,000|15m",
+    "7 %|7%",
+    "3 %|3%"
+   ],
+   2
+  ],
+  "answer": "The EU AI Act sets a maximum fine for providers of general‑purpose AI models that break the rules at either 3 % of their worldwide turnover in the previous year or €15 million, whichever is higher [1]. The sources provided do not contain any provision that specifies a maximum fine for breaches of the deployer obligations in Articles 26 or 86, so a direct comparison cannot be made with the information given.",
+  "seconds": 12.63
+ }
+]
