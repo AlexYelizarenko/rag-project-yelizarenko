@@ -1,0 +1,3328 @@
+{
+  "best": "dense_binding_only",
+  "notes": "Best setting is chosen by (Recall@10, Recall@5). Exact gold chunk_id required; a neighbouring piece of the same article counts as a miss. Hybrid = RRF (k=60) over top-50 dense and top-50 BM25.",
+  "experiments": [
+    {
+      "name": "dense",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.75,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q15",
+        "q18",
+        "q19"
+      ],
+      "misses_at_10": [
+        "q05",
+        "q07",
+        "q10",
+        "q13",
+        "q19"
+      ]
+    },
+    {
+      "name": "dense_eu_ai_act_prefix",
+      "recall_at_5": 0.3,
+      "recall_at_10": 0.45,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q04",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q04",
+        "q05",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "name": "dense_regulation_prefix",
+      "recall_at_5": 0.15,
+      "recall_at_10": 0.25,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q10",
+        "q11",
+        "q13",
+        "q14",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "name": "dense_binding_only",
+      "recall_at_5": 0.65,
+      "recall_at_10": 0.8,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q07",
+        "q10",
+        "q13",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q05",
+        "q10",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "name": "bm25",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.6,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q05",
+        "q08",
+        "q09",
+        "q10",
+        "q12",
+        "q13",
+        "q18",
+        "q19"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q02",
+        "q05",
+        "q08",
+        "q10",
+        "q12",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "name": "bm25_remove_stopwords",
+      "recall_at_5": 0.45,
+      "recall_at_10": 0.55,
+      "misses_at_5": [
+        "q01",
+        "q02",
+        "q05",
+        "q08",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q18",
+        "q19"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q02",
+        "q05",
+        "q08",
+        "q10",
+        "q12",
+        "q13",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "name": "bm25_binding_only",
+      "recall_at_5": 0.6,
+      "recall_at_10": 0.65,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q08",
+        "q10",
+        "q12",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q05",
+        "q08",
+        "q10",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    },
+    {
+      "name": "hybrid",
+      "recall_at_5": 0.65,
+      "recall_at_10": 0.7,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q08",
+        "q10",
+        "q13",
+        "q18",
+        "q19"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q05",
+        "q10",
+        "q13",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "name": "hybrid_binding_only",
+      "recall_at_5": 0.7,
+      "recall_at_10": 0.7,
+      "misses_at_5": [
+        "q01",
+        "q05",
+        "q10",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "misses_at_10": [
+        "q01",
+        "q05",
+        "q10",
+        "q18",
+        "q19",
+        "q20"
+      ]
+    }
+  ],
+  "ranks": {
+    "dense": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": 9,
+        "top": [
+          "intro_80",
+          "intro_95",
+          "intro_6",
+          "annex_III_part_5",
+          "article_3_def_66",
+          "article_109",
+          "article_104",
+          "article_108",
+          "article_3_def_1",
+          "intro_16"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 2,
+        "top": [
+          "intro_109",
+          "article_3_def_4",
+          "intro_131",
+          "article_13_part_1",
+          "intro_110",
+          "article_26_part_1",
+          "intro_144",
+          "article_3_def_15",
+          "intro_138",
+          "article_26_part_5"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 3,
+        "top": [
+          "intro_80",
+          "intro_7",
+          "article_2_part_1",
+          "article_108",
+          "article_109",
+          "article_104",
+          "annex_VIII_part_4",
+          "intro_121",
+          "intro_6",
+          "intro_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 2,
+        "top": [
+          "intro_150",
+          "article_4",
+          "intro_28",
+          "intro_216",
+          "intro_156",
+          "intro_203",
+          "intro_129",
+          "intro_131",
+          "intro_124",
+          "article_60_part_1"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "article_109",
+          "article_108",
+          "intro_41",
+          "article_104",
+          "article_103",
+          "article_102",
+          "article_107",
+          "intro_6",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 3,
+        "top": [
+          "article_7_part_1",
+          "article_6_part_1",
+          "article_6_part_2",
+          "annex_III_part_5",
+          "intro_75",
+          "article_7_part_3",
+          "intro_80",
+          "annex_VIII_part_2",
+          "article_60_part_1",
+          "intro_76"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": null,
+        "top": [
+          "intro_102",
+          "intro_101",
+          "intro_109",
+          "article_9_part_1",
+          "article_14_part_1",
+          "intro_91",
+          "intro_100",
+          "article_15_part_2",
+          "intro_75",
+          "article_13_part_2"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 1,
+        "top": [
+          "article_10_part_2",
+          "intro_102",
+          "article_10_part_4",
+          "intro_103",
+          "article_9_part_2",
+          "article_17_part_1",
+          "article_10_part_1",
+          "intro_108",
+          "article_3_def_29",
+          "article_3_def_30"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 1,
+        "top": [
+          "article_14_part_1",
+          "article_14_part_2",
+          "article_26_part_5",
+          "intro_109",
+          "intro_131",
+          "intro_75",
+          "article_14_part_3",
+          "intro_100",
+          "article_75",
+          "intro_69"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_100",
+          "intro_109",
+          "intro_75",
+          "intro_128",
+          "article_14_part_1",
+          "intro_102",
+          "article_9_part_1",
+          "intro_129",
+          "intro_156",
+          "intro_108"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 8,
+        "top": [
+          "intro_89",
+          "intro_136",
+          "intro_41",
+          "intro_91",
+          "intro_118",
+          "intro_207",
+          "intro_6",
+          "article_27_part_1",
+          "article_7_part_2",
+          "intro_28"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 2,
+        "top": [
+          "intro_177",
+          "article_50_part_1",
+          "intro_165",
+          "intro_96",
+          "intro_28",
+          "article_2_part_3",
+          "intro_6",
+          "intro_47",
+          "article_21",
+          "intro_39"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": null,
+        "top": [
+          "intro_156",
+          "article_3_def_65",
+          "intro_140",
+          "intro_160",
+          "article_55",
+          "article_52_part_1",
+          "intro_159",
+          "intro_152",
+          "intro_155",
+          "intro_157"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 8,
+        "top": [
+          "intro_142",
+          "intro_139",
+          "annex_XI_part_1",
+          "article_3_def_63",
+          "article_54_part_2",
+          "article_3_def_66",
+          "intro_217",
+          "article_53_part_1",
+          "intro_158",
+          "intro_130"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 6,
+        "top": [
+          "intro_185",
+          "article_3_def_55",
+          "article_57_part_2",
+          "article_58_part_1",
+          "intro_188",
+          "article_57_part_1",
+          "intro_187",
+          "article_57_part_3",
+          "article_58_part_2",
+          "article_57_part_4"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_3",
+          "article_73_part_2",
+          "intro_205",
+          "intro_100",
+          "article_80_part_1",
+          "article_20",
+          "intro_101",
+          "intro_108",
+          "article_60_part_4"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 5,
+        "top": [
+          "intro_76",
+          "intro_224",
+          "intro_16",
+          "intro_5",
+          "article_86",
+          "intro_17",
+          "article_7_part_2",
+          "intro_95",
+          "article_101_part_2",
+          "article_14_part_2"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": 6,
+        "top": [
+          "article_5_part_1",
+          "article_101_part_1",
+          "intro_223",
+          "article_60_part_1",
+          "article_101_part_2",
+          "article_99_part_1",
+          "intro_218",
+          "intro_232",
+          "article_60_part_4",
+          "intro_207"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "intro_232",
+          "article_109",
+          "article_108",
+          "article_106",
+          "article_107",
+          "article_102",
+          "article_104",
+          "article_42",
+          "article_103",
+          "article_105"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": 2,
+        "top": [
+          "intro_158",
+          "intro_143",
+          "intro_145",
+          "intro_144",
+          "article_54_part_2",
+          "article_101_part_2",
+          "intro_130",
+          "article_53_part_2",
+          "intro_216",
+          "intro_140"
+        ]
+      }
+    ],
+    "dense_eu_ai_act_prefix": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_95",
+          "article_109",
+          "intro_6",
+          "article_108",
+          "annex_III_part_5",
+          "article_104",
+          "article_3_def_66",
+          "article_103",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 10,
+        "top": [
+          "article_26_part_5",
+          "intro_138",
+          "intro_109",
+          "intro_131",
+          "article_58_part_3",
+          "intro_175",
+          "article_62_part_2",
+          "annex_VIII_part_4",
+          "intro_80",
+          "article_3_def_4"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 3,
+        "top": [
+          "intro_7",
+          "article_108",
+          "article_2_part_1",
+          "intro_80",
+          "article_109",
+          "article_104",
+          "article_103",
+          "intro_121",
+          "intro_2",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_199",
+          "intro_27",
+          "article_109",
+          "intro_7",
+          "intro_175",
+          "intro_216",
+          "intro_28",
+          "article_108",
+          "intro_6"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "article_108",
+          "article_109",
+          "article_104",
+          "article_103",
+          "article_106",
+          "article_107",
+          "article_105",
+          "article_102",
+          "article_110"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 5,
+        "top": [
+          "article_7_part_1",
+          "intro_80",
+          "annex_III_part_5",
+          "article_6_part_1",
+          "article_6_part_2",
+          "intro_95",
+          "intro_73",
+          "article_40_part_1",
+          "article_26_part_5",
+          "article_60_part_1"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_175",
+          "intro_43",
+          "article_26_part_5",
+          "intro_78",
+          "article_75",
+          "intro_138",
+          "intro_6",
+          "intro_221",
+          "article_79_part_1"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 3,
+        "top": [
+          "intro_80",
+          "article_10_part_4",
+          "article_10_part_2",
+          "intro_226",
+          "intro_103",
+          "intro_6",
+          "article_40_part_1",
+          "intro_102",
+          "annex_IV_part_3",
+          "article_71_part_1"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 4,
+        "top": [
+          "intro_80",
+          "article_26_part_5",
+          "intro_6",
+          "article_14_part_1",
+          "intro_95",
+          "intro_175",
+          "article_75",
+          "article_109",
+          "article_14_part_3",
+          "intro_221"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_175",
+          "intro_6",
+          "intro_128",
+          "intro_127",
+          "article_16",
+          "intro_75",
+          "article_26_part_5",
+          "intro_97",
+          "intro_226"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": null,
+        "top": [
+          "intro_6",
+          "intro_224",
+          "intro_80",
+          "intro_95",
+          "intro_136",
+          "intro_89",
+          "intro_107",
+          "article_7_part_2",
+          "intro_27",
+          "intro_2"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 7,
+        "top": [
+          "intro_6",
+          "intro_165",
+          "intro_95",
+          "intro_177",
+          "intro_80",
+          "article_2_part_3",
+          "article_50_part_1",
+          "intro_175",
+          "intro_221",
+          "intro_96"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": null,
+        "top": [
+          "intro_160",
+          "article_55",
+          "intro_80",
+          "intro_140",
+          "intro_156",
+          "intro_159",
+          "intro_162",
+          "intro_226",
+          "article_3_def_65",
+          "article_52_part_1"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_142",
+          "article_101_part_2",
+          "annex_XI_part_1",
+          "intro_139",
+          "article_3_def_66",
+          "intro_175",
+          "article_54_part_2",
+          "intro_226",
+          "article_53_part_2"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 2,
+        "top": [
+          "article_58_part_1",
+          "article_57_part_1",
+          "intro_185",
+          "article_3_def_55",
+          "intro_187",
+          "article_57_part_2",
+          "article_58_part_3",
+          "article_57_part_3",
+          "intro_188",
+          "article_58_part_2"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 3,
+        "top": [
+          "article_73_part_3",
+          "article_73_part_2",
+          "article_73_part_1",
+          "intro_80",
+          "intro_138",
+          "intro_205",
+          "article_80_part_2",
+          "article_80_part_1",
+          "article_22_part_2",
+          "article_16"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": null,
+        "top": [
+          "intro_224",
+          "intro_80",
+          "intro_95",
+          "article_101_part_2",
+          "intro_76",
+          "intro_6",
+          "article_108",
+          "intro_73",
+          "article_89",
+          "article_7_part_2"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "intro_80",
+          "article_108",
+          "article_104",
+          "article_103",
+          "article_106",
+          "article_107",
+          "intro_218",
+          "article_105",
+          "intro_223"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_108",
+          "article_109",
+          "article_106",
+          "article_104",
+          "article_103",
+          "article_107",
+          "article_105",
+          "article_102",
+          "article_110",
+          "intro_232"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": 6,
+        "top": [
+          "intro_158",
+          "intro_145",
+          "intro_80",
+          "intro_144",
+          "article_101_part_2",
+          "intro_143",
+          "article_94",
+          "article_53_part_2",
+          "intro_226",
+          "intro_216"
+        ]
+      }
+    ],
+    "dense_regulation_prefix": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_104",
+          "intro_80",
+          "article_103",
+          "article_107",
+          "article_102",
+          "article_110",
+          "article_105",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": null,
+        "top": [
+          "article_26_part_5",
+          "article_58_part_3",
+          "intro_187",
+          "article_102",
+          "intro_189",
+          "annex_VIII_part_4",
+          "article_57_part_3",
+          "intro_80",
+          "intro_131",
+          "article_58_part_2"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": null,
+        "top": [
+          "article_108",
+          "article_109",
+          "article_104",
+          "article_102",
+          "article_103",
+          "article_107",
+          "article_106",
+          "article_105",
+          "article_110",
+          "article_112_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": null,
+        "top": [
+          "article_102",
+          "article_109",
+          "intro_80",
+          "article_108",
+          "intro_132",
+          "article_104",
+          "article_103",
+          "intro_33",
+          "article_107",
+          "article_105"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_102",
+          "article_104",
+          "article_103",
+          "article_107",
+          "article_105",
+          "article_106",
+          "article_110",
+          "intro_80"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "article_7_part_1",
+          "intro_228",
+          "intro_127",
+          "article_40_part_1",
+          "article_6_part_1",
+          "article_7_part_3",
+          "intro_73",
+          "intro_231",
+          "article_26_part_5"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_221",
+          "article_109",
+          "intro_127",
+          "article_102",
+          "article_74_part_4",
+          "article_75",
+          "article_108",
+          "article_74_part_1",
+          "article_26_part_5"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 4,
+        "top": [
+          "intro_103",
+          "intro_80",
+          "article_10_part_4",
+          "article_10_part_2",
+          "article_40_part_1",
+          "article_42",
+          "intro_127",
+          "intro_226",
+          "intro_102",
+          "intro_170"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 8,
+        "top": [
+          "intro_80",
+          "article_26_part_5",
+          "intro_207",
+          "article_109",
+          "intro_127",
+          "article_107",
+          "intro_221",
+          "article_14_part_1",
+          "article_103",
+          "article_104"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_127",
+          "intro_128",
+          "intro_97",
+          "intro_221",
+          "intro_207",
+          "intro_71",
+          "intro_231",
+          "intro_75",
+          "article_2_part_1"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": null,
+        "top": [
+          "intro_107",
+          "article_109",
+          "article_108",
+          "intro_207",
+          "article_102",
+          "article_110",
+          "article_105",
+          "intro_232",
+          "intro_6",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 8,
+        "top": [
+          "article_2_part_3",
+          "intro_165",
+          "intro_96",
+          "intro_132",
+          "intro_221",
+          "intro_183",
+          "intro_166",
+          "article_50_part_1",
+          "intro_107",
+          "intro_6"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "intro_164",
+          "intro_160",
+          "intro_140",
+          "article_55",
+          "intro_127",
+          "article_109",
+          "intro_226",
+          "article_40_part_1",
+          "article_1"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": null,
+        "top": [
+          "intro_80",
+          "article_109",
+          "article_102",
+          "article_108",
+          "article_54_part_2",
+          "intro_127",
+          "intro_232",
+          "article_53_part_2",
+          "article_40_part_1",
+          "article_104"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 3,
+        "top": [
+          "article_3_def_55",
+          "intro_185",
+          "article_57_part_1",
+          "intro_187",
+          "article_58_part_1",
+          "article_57_part_2",
+          "article_58_part_3",
+          "article_57_part_3",
+          "intro_188",
+          "article_57_part_4"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 3,
+        "top": [
+          "article_73_part_3",
+          "article_73_part_2",
+          "article_73_part_1",
+          "article_80_part_2",
+          "article_22_part_2",
+          "article_80_part_1",
+          "article_82",
+          "intro_205",
+          "article_89",
+          "intro_231"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": null,
+        "top": [
+          "intro_224",
+          "article_109",
+          "intro_80",
+          "article_108",
+          "article_107",
+          "intro_189",
+          "article_104",
+          "article_103",
+          "article_102",
+          "article_106"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_104",
+          "article_103",
+          "article_107",
+          "article_105",
+          "article_106",
+          "intro_223",
+          "article_102",
+          "intro_80"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_102",
+          "article_104",
+          "article_107",
+          "article_105",
+          "article_103",
+          "article_106",
+          "article_110",
+          "intro_232"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": null,
+        "top": [
+          "intro_158",
+          "article_109",
+          "article_108",
+          "intro_145",
+          "article_104",
+          "article_1",
+          "article_107",
+          "intro_80",
+          "article_110",
+          "article_102"
+        ]
+      }
+    ],
+    "dense_binding_only": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": 6,
+        "top": [
+          "annex_III_part_5",
+          "article_3_def_66",
+          "article_109",
+          "article_104",
+          "article_108",
+          "article_3_def_1",
+          "article_103",
+          "article_3_def_18",
+          "article_106",
+          "article_40_part_1"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 1,
+        "top": [
+          "article_3_def_4",
+          "article_13_part_1",
+          "article_26_part_1",
+          "article_3_def_15",
+          "article_26_part_5",
+          "article_58_part_3",
+          "article_62_part_2",
+          "article_57_part_3",
+          "article_3_def_11",
+          "article_26_part_2"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 1,
+        "top": [
+          "article_2_part_1",
+          "article_108",
+          "article_109",
+          "article_104",
+          "annex_VIII_part_4",
+          "article_103",
+          "article_106",
+          "article_107",
+          "annex_V",
+          "article_112_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "article_60_part_1",
+          "article_2_part_1",
+          "article_3_def_47",
+          "article_88",
+          "article_101_part_2",
+          "article_10_part_4",
+          "article_22_part_1",
+          "article_60_part_4",
+          "article_3_def_56"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_104",
+          "article_103",
+          "article_102",
+          "article_107",
+          "article_106",
+          "article_105",
+          "article_110",
+          "article_40_part_1"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 3,
+        "top": [
+          "article_7_part_1",
+          "article_6_part_1",
+          "article_6_part_2",
+          "annex_III_part_5",
+          "article_7_part_3",
+          "annex_VIII_part_2",
+          "article_60_part_1",
+          "article_26_part_5",
+          "article_14_part_3",
+          "article_43_part_2"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 6,
+        "top": [
+          "article_9_part_1",
+          "article_14_part_1",
+          "article_15_part_2",
+          "article_13_part_2",
+          "article_14_part_2",
+          "annex_III_part_2",
+          "article_60_part_1",
+          "annex_III_part_1",
+          "article_75",
+          "article_5_part_1"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 1,
+        "top": [
+          "article_10_part_2",
+          "article_10_part_4",
+          "article_9_part_2",
+          "article_17_part_1",
+          "article_10_part_1",
+          "article_3_def_29",
+          "article_3_def_30",
+          "article_15_part_2",
+          "article_9_part_1",
+          "article_13_part_2"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 1,
+        "top": [
+          "article_14_part_1",
+          "article_14_part_2",
+          "article_26_part_5",
+          "article_14_part_3",
+          "article_75",
+          "article_26_part_1",
+          "article_10_part_4",
+          "article_21",
+          "article_60_part_1",
+          "article_60_part_4"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "article_14_part_1",
+          "article_9_part_1",
+          "article_25_part_1",
+          "article_60_part_4",
+          "article_6_part_1",
+          "article_14_part_2",
+          "annex_VIII_part_2",
+          "article_60_part_1",
+          "article_26_part_5",
+          "article_9_part_3"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 1,
+        "top": [
+          "article_27_part_1",
+          "article_7_part_2",
+          "annex_III_part_5",
+          "article_14_part_3",
+          "article_50_part_1",
+          "article_7_part_1",
+          "article_86",
+          "article_82",
+          "article_14_part_1",
+          "article_77"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 1,
+        "top": [
+          "article_50_part_1",
+          "article_2_part_3",
+          "article_21",
+          "article_4",
+          "article_14_part_1",
+          "article_13_part_2",
+          "article_6_part_2",
+          "article_14_part_3",
+          "article_26_part_5",
+          "annex_III_part_1"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": 6,
+        "top": [
+          "article_3_def_65",
+          "article_55",
+          "article_52_part_1",
+          "article_52_part_2",
+          "article_90",
+          "article_51",
+          "article_93",
+          "article_14_part_1",
+          "article_3_def_63",
+          "annex_XI_part_1"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 5,
+        "top": [
+          "annex_XI_part_1",
+          "article_3_def_63",
+          "article_54_part_2",
+          "article_3_def_66",
+          "article_53_part_1",
+          "article_53_part_2",
+          "annex_XII",
+          "article_101_part_2",
+          "article_53_part_3",
+          "annex_XIII"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 4,
+        "top": [
+          "article_3_def_55",
+          "article_57_part_2",
+          "article_58_part_1",
+          "article_57_part_1",
+          "article_57_part_3",
+          "article_58_part_2",
+          "article_57_part_4",
+          "article_58_part_3",
+          "article_57_part_5",
+          "article_66"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_3",
+          "article_73_part_2",
+          "article_80_part_1",
+          "article_20",
+          "article_60_part_4",
+          "article_13_part_2",
+          "article_82",
+          "article_21",
+          "article_89"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 1,
+        "top": [
+          "article_86",
+          "article_7_part_2",
+          "article_101_part_2",
+          "article_14_part_2",
+          "article_60_part_1",
+          "article_6_part_2",
+          "article_3_def_1",
+          "article_89",
+          "article_3_def_17",
+          "article_3_def_18"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": 5,
+        "top": [
+          "article_5_part_1",
+          "article_101_part_1",
+          "article_60_part_1",
+          "article_101_part_2",
+          "article_99_part_1",
+          "article_60_part_4",
+          "article_57_part_4",
+          "article_26_part_5",
+          "article_42",
+          "article_73_part_3"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_109",
+          "article_108",
+          "article_106",
+          "article_107",
+          "article_102",
+          "article_104",
+          "article_42",
+          "article_103",
+          "article_105",
+          "article_110"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": null,
+        "top": [
+          "article_54_part_2",
+          "article_101_part_2",
+          "article_53_part_2",
+          "article_89",
+          "article_94",
+          "article_1",
+          "annex_XI_part_1",
+          "annex_XII",
+          "article_53_part_3",
+          "article_40_part_1"
+        ]
+      }
+    ],
+    "bm25": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "article_74_part_4",
+          "article_74_part_1",
+          "intro_125",
+          "article_91",
+          "article_74_part_3",
+          "article_56_part_2",
+          "article_70_part_3",
+          "intro_127",
+          "intro_121",
+          "intro_97"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": null,
+        "top": [
+          "article_27_part_2",
+          "intro_101",
+          "intro_78",
+          "article_86",
+          "intro_26",
+          "intro_163",
+          "intro_39",
+          "intro_109",
+          "intro_165",
+          "annex_IV_part_1"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 2,
+        "top": [
+          "article_2_part_2",
+          "article_2_part_1",
+          "article_3_def_57",
+          "article_2_part_3",
+          "intro_30",
+          "intro_26",
+          "article_3_def_61",
+          "article_43_part_2",
+          "article_3_def_5",
+          "article_50_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "intro_85",
+          "article_53_part_2",
+          "article_55",
+          "intro_175",
+          "intro_180",
+          "article_17_part_1",
+          "intro_150",
+          "annex_IV_part_2",
+          "article_3_def_55"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "intro_165",
+          "intro_110",
+          "intro_78",
+          "intro_101",
+          "intro_41",
+          "intro_100",
+          "intro_109",
+          "intro_89",
+          "article_47",
+          "article_71_part_1"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 1,
+        "top": [
+          "article_6_part_2",
+          "intro_76",
+          "article_49",
+          "intro_78",
+          "intro_79",
+          "article_6_part_1",
+          "article_43_part_2",
+          "article_7_part_1",
+          "article_43_part_1",
+          "article_86"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 1,
+        "top": [
+          "annex_III_part_2",
+          "article_3_def_63",
+          "article_6_part_1",
+          "intro_127",
+          "article_6_part_2",
+          "annex_VIII_part_3",
+          "intro_141",
+          "intro_76",
+          "intro_101",
+          "article_10_part_4"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": null,
+        "top": [
+          "intro_103",
+          "intro_105",
+          "annex_VII_part_3",
+          "annex_IV_part_2",
+          "article_17_part_1",
+          "annex_XI_part_2",
+          "article_10_part_1",
+          "annex_XIII",
+          "intro_102",
+          "article_59_part_1"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 10,
+        "top": [
+          "article_14_part_2",
+          "intro_94",
+          "intro_207",
+          "intro_78",
+          "article_6_part_2",
+          "article_74_part_4",
+          "intro_157",
+          "intro_42",
+          "article_75",
+          "article_14_part_1"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_76",
+          "intro_78",
+          "article_24_part_1",
+          "intro_26",
+          "article_41_part_2",
+          "intro_109",
+          "article_25_part_1",
+          "intro_89",
+          "article_52_part_1",
+          "intro_87"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 4,
+        "top": [
+          "intro_6",
+          "intro_89",
+          "intro_86",
+          "article_27_part_1",
+          "intro_70",
+          "article_36_part_3",
+          "intro_88",
+          "intro_136",
+          "article_77",
+          "article_3_def_65"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": null,
+        "top": [
+          "intro_76",
+          "article_17_part_1",
+          "intro_39",
+          "article_8",
+          "intro_155",
+          "article_53_part_2",
+          "article_41_part_2",
+          "intro_111",
+          "intro_6",
+          "article_14_part_1"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": 8,
+        "top": [
+          "intro_154",
+          "article_52_part_1",
+          "intro_140",
+          "article_52_part_2",
+          "intro_156",
+          "intro_157",
+          "intro_155",
+          "article_51",
+          "intro_145",
+          "intro_159"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 1,
+        "top": [
+          "article_53_part_1",
+          "article_101_part_1",
+          "article_55",
+          "intro_216",
+          "intro_218",
+          "intro_150",
+          "intro_149",
+          "article_53_part_2",
+          "intro_142",
+          "article_54_part_2"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 2,
+        "top": [
+          "intro_185",
+          "article_57_part_1",
+          "article_3_def_55",
+          "article_58_part_2",
+          "article_57_part_5",
+          "article_57_part_4",
+          "article_95_part_2",
+          "article_59_part_1",
+          "article_57_part_2",
+          "article_76"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_2",
+          "article_3_def_49",
+          "intro_161",
+          "intro_205",
+          "article_76",
+          "article_26_part_2",
+          "article_73_part_3",
+          "article_112_part_2",
+          "intro_94"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 2,
+        "top": [
+          "intro_224",
+          "article_86",
+          "article_44",
+          "intro_133",
+          "intro_87",
+          "article_5_part_1",
+          "article_40_part_2",
+          "article_43_part_2",
+          "intro_111",
+          "article_26_part_4"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "intro_163",
+          "article_101_part_1",
+          "article_5_part_1",
+          "article_56_part_3",
+          "article_56_part_1",
+          "article_3_def_63",
+          "annex_XII",
+          "intro_162",
+          "article_5_part_3",
+          "intro_151"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "intro_232",
+          "intro_44",
+          "intro_66",
+          "intro_139",
+          "intro_47",
+          "intro_233",
+          "intro_41",
+          "intro_207",
+          "article_5_part_5",
+          "intro_228"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": 4,
+        "top": [
+          "intro_144",
+          "intro_158",
+          "intro_145",
+          "intro_143",
+          "intro_130",
+          "article_54_part_2",
+          "article_74_part_5",
+          "article_53_part_2",
+          "article_25_part_2",
+          "article_2_part_3"
+        ]
+      }
+    ],
+    "bm25_remove_stopwords": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "article_68_part_1",
+          "article_74_part_1",
+          "intro_125",
+          "intro_97",
+          "article_72_part_1",
+          "intro_121",
+          "article_56_part_2",
+          "article_74_part_3",
+          "article_26_part_3",
+          "intro_80"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": null,
+        "top": [
+          "article_27_part_2",
+          "intro_101",
+          "intro_109",
+          "intro_110",
+          "intro_41",
+          "intro_165",
+          "intro_6",
+          "article_26_part_1",
+          "annex_IV_part_1",
+          "intro_163"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 1,
+        "top": [
+          "article_2_part_1",
+          "article_3_def_61",
+          "intro_58",
+          "intro_30",
+          "article_3_def_5",
+          "article_3_def_6",
+          "article_2_part_2",
+          "intro_11",
+          "article_60_part_4",
+          "article_60_part_1"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 2,
+        "top": [
+          "article_3_def_55",
+          "article_4",
+          "intro_85",
+          "intro_150",
+          "intro_211",
+          "intro_180",
+          "intro_10",
+          "intro_181",
+          "annex_III_part_2",
+          "article_91"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "intro_165",
+          "intro_78",
+          "intro_110",
+          "intro_41",
+          "intro_101",
+          "intro_109",
+          "intro_100",
+          "intro_89",
+          "article_47",
+          "annex_V"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 1,
+        "top": [
+          "article_6_part_2",
+          "intro_76",
+          "intro_79",
+          "article_49",
+          "article_6_part_1",
+          "intro_78",
+          "article_43_part_2",
+          "article_7_part_1",
+          "intro_231",
+          "article_86"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 1,
+        "top": [
+          "annex_III_part_2",
+          "article_3_def_63",
+          "intro_127",
+          "intro_141",
+          "article_10_part_4",
+          "article_6_part_1",
+          "article_26_part_3",
+          "annex_VIII_part_3",
+          "intro_82",
+          "intro_76"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": null,
+        "top": [
+          "intro_105",
+          "intro_103",
+          "intro_102",
+          "article_10_part_4",
+          "article_17_part_1",
+          "article_10_part_1",
+          "annex_VII_part_3",
+          "annex_XIII",
+          "intro_84",
+          "article_59_part_1"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 8,
+        "top": [
+          "intro_94",
+          "article_14_part_2",
+          "article_74_part_4",
+          "intro_207",
+          "intro_69",
+          "intro_106",
+          "intro_42",
+          "article_14_part_1",
+          "intro_111",
+          "intro_215"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_101",
+          "intro_109",
+          "intro_100",
+          "intro_110",
+          "intro_165",
+          "intro_41",
+          "intro_78",
+          "intro_89",
+          "intro_26",
+          "article_6_part_1"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 6,
+        "top": [
+          "intro_6",
+          "intro_89",
+          "intro_88",
+          "intro_86",
+          "intro_136",
+          "article_27_part_1",
+          "article_3_def_4",
+          "article_36_part_3",
+          "article_3_def_65",
+          "intro_27"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": null,
+        "top": [
+          "intro_155",
+          "intro_156",
+          "intro_143",
+          "annex_XIII",
+          "article_6_part_2",
+          "intro_78",
+          "article_3_def_13",
+          "intro_111",
+          "intro_42",
+          "intro_39"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": null,
+        "top": [
+          "intro_156",
+          "article_52_part_1",
+          "article_52_part_2",
+          "intro_154",
+          "intro_157",
+          "intro_145",
+          "intro_140",
+          "intro_155",
+          "intro_159",
+          "article_55"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 1,
+        "top": [
+          "article_53_part_1",
+          "article_101_part_1",
+          "intro_218",
+          "intro_216",
+          "intro_150",
+          "article_55",
+          "intro_149",
+          "intro_142",
+          "article_53_part_2",
+          "article_54_part_2"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 2,
+        "top": [
+          "intro_185",
+          "article_57_part_1",
+          "article_3_def_55",
+          "article_57_part_5",
+          "article_58_part_2",
+          "article_57_part_2",
+          "article_58_part_1",
+          "intro_186",
+          "intro_188",
+          "article_57_part_4"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_2",
+          "intro_205",
+          "article_3_def_49",
+          "article_73_part_3",
+          "intro_161",
+          "article_26_part_2",
+          "article_60_part_4",
+          "article_60_part_3",
+          "article_76"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 2,
+        "top": [
+          "intro_224",
+          "article_86",
+          "intro_133",
+          "annex_VII_part_2",
+          "article_51",
+          "intro_126",
+          "article_5_part_3",
+          "intro_155",
+          "intro_99",
+          "article_26_part_4"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "intro_163",
+          "article_101_part_1",
+          "intro_64",
+          "intro_162",
+          "article_56_part_2",
+          "article_26_part_3",
+          "article_56_part_3",
+          "article_56_part_1",
+          "intro_151",
+          "intro_63"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "intro_41",
+          "intro_44",
+          "intro_207",
+          "intro_232",
+          "intro_228",
+          "intro_103",
+          "intro_47",
+          "article_5_part_5",
+          "intro_65",
+          "article_5_part_1"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": 4,
+        "top": [
+          "intro_144",
+          "intro_158",
+          "intro_145",
+          "intro_143",
+          "intro_130",
+          "article_54_part_2",
+          "article_74_part_5",
+          "article_53_part_2",
+          "article_25_part_2",
+          "article_53_part_3"
+        ]
+      }
+    ],
+    "bm25_binding_only": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "article_74_part_4",
+          "article_74_part_1",
+          "article_91",
+          "article_74_part_3",
+          "article_56_part_2",
+          "article_70_part_3",
+          "article_16",
+          "annex_V",
+          "article_68_part_1",
+          "annex_IV_part_2"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 4,
+        "top": [
+          "article_27_part_2",
+          "article_86",
+          "annex_IV_part_1",
+          "article_3_def_4",
+          "article_76",
+          "article_73_part_1",
+          "article_50_part_1",
+          "article_14_part_3",
+          "article_25_part_1",
+          "article_14_part_2"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 2,
+        "top": [
+          "article_2_part_2",
+          "article_2_part_1",
+          "article_3_def_57",
+          "article_2_part_3",
+          "article_3_def_61",
+          "article_43_part_2",
+          "article_3_def_5",
+          "article_50_part_2",
+          "article_74_part_1",
+          "article_79_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "article_53_part_2",
+          "article_55",
+          "article_17_part_1",
+          "annex_IV_part_2",
+          "article_3_def_55",
+          "article_50_part_1",
+          "article_31_part_2",
+          "article_92_part_1",
+          "article_24_part_1"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "article_47",
+          "article_71_part_1",
+          "article_49",
+          "article_16",
+          "annex_V",
+          "article_2_part_3",
+          "article_40_part_1",
+          "article_74_part_3",
+          "article_26_part_3",
+          "article_50_part_2"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 1,
+        "top": [
+          "article_6_part_2",
+          "article_49",
+          "article_6_part_1",
+          "article_43_part_2",
+          "article_7_part_1",
+          "article_43_part_1",
+          "article_86",
+          "article_51",
+          "article_71_part_1",
+          "article_7_part_3"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 1,
+        "top": [
+          "annex_III_part_2",
+          "article_3_def_63",
+          "article_6_part_1",
+          "article_6_part_2",
+          "annex_VIII_part_3",
+          "article_10_part_4",
+          "article_25_part_1",
+          "annex_III_part_4",
+          "article_26_part_3",
+          "article_81_part_2"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": null,
+        "top": [
+          "annex_VII_part_3",
+          "annex_IV_part_2",
+          "article_17_part_1",
+          "annex_XI_part_2",
+          "article_10_part_1",
+          "annex_XIII",
+          "article_59_part_1",
+          "annex_VII_part_2",
+          "article_10_part_4",
+          "article_31_part_1"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 5,
+        "top": [
+          "article_14_part_2",
+          "article_6_part_2",
+          "article_74_part_4",
+          "article_75",
+          "article_14_part_1",
+          "article_27_part_1",
+          "article_6_part_1",
+          "article_52_part_1",
+          "annex_III_part_1",
+          "article_14_part_3"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "article_24_part_1",
+          "article_41_part_2",
+          "article_25_part_1",
+          "article_52_part_1",
+          "article_17_part_1",
+          "article_43_part_2",
+          "article_23_part_1",
+          "article_6_part_2",
+          "article_75",
+          "article_20"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 1,
+        "top": [
+          "article_27_part_1",
+          "article_36_part_3",
+          "article_77",
+          "article_3_def_65",
+          "article_36_part_1",
+          "article_26_part_3",
+          "annex_VII_part_3",
+          "article_49",
+          "article_7_part_2",
+          "article_14_part_1"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 8,
+        "top": [
+          "article_17_part_1",
+          "article_8",
+          "article_53_part_2",
+          "article_41_part_2",
+          "article_14_part_1",
+          "article_24_part_1",
+          "article_16",
+          "article_50_part_1",
+          "article_55",
+          "article_20"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": 3,
+        "top": [
+          "article_52_part_1",
+          "article_52_part_2",
+          "article_51",
+          "article_55",
+          "article_93",
+          "article_90",
+          "article_92_part_1",
+          "article_101_part_1",
+          "article_53_part_2",
+          "annex_XI_part_2"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 1,
+        "top": [
+          "article_53_part_1",
+          "article_101_part_1",
+          "article_55",
+          "article_53_part_2",
+          "article_54_part_2",
+          "annex_XI_part_2",
+          "article_68_part_2",
+          "annex_XI_part_1",
+          "article_93",
+          "article_88"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 1,
+        "top": [
+          "article_57_part_1",
+          "article_3_def_55",
+          "article_58_part_2",
+          "article_57_part_5",
+          "article_57_part_4",
+          "article_95_part_2",
+          "article_59_part_1",
+          "article_57_part_2",
+          "article_76",
+          "article_57_part_3"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_2",
+          "article_3_def_49",
+          "article_76",
+          "article_26_part_2",
+          "article_73_part_3",
+          "article_112_part_2",
+          "article_57_part_2",
+          "article_36_part_3",
+          "article_93"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 1,
+        "top": [
+          "article_86",
+          "article_44",
+          "article_5_part_1",
+          "article_40_part_2",
+          "article_43_part_2",
+          "article_26_part_4",
+          "article_51",
+          "article_99_part_3",
+          "annex_VII_part_2",
+          "article_5_part_3"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "article_101_part_1",
+          "article_5_part_1",
+          "article_56_part_3",
+          "article_56_part_1",
+          "article_3_def_63",
+          "annex_XII",
+          "article_5_part_3",
+          "article_5_part_5",
+          "article_53_part_2",
+          "article_56_part_2"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_5_part_5",
+          "article_5_part_1",
+          "article_53_part_2",
+          "article_74_part_1",
+          "article_57_part_5",
+          "article_96",
+          "article_86",
+          "article_10_part_1",
+          "article_111",
+          "article_2_part_3"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": null,
+        "top": [
+          "article_54_part_2",
+          "article_74_part_5",
+          "article_53_part_2",
+          "article_25_part_2",
+          "article_2_part_3",
+          "article_89",
+          "article_53_part_3",
+          "article_55",
+          "article_68_part_1",
+          "article_21"
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "intro_175",
+          "intro_127",
+          "intro_97",
+          "intro_165",
+          "article_2_part_1",
+          "intro_76",
+          "article_75",
+          "article_74_part_4",
+          "intro_80",
+          "article_74_part_1"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 2,
+        "top": [
+          "intro_109",
+          "article_3_def_4",
+          "intro_110",
+          "article_13_part_1",
+          "intro_144",
+          "intro_138",
+          "article_25_part_1",
+          "intro_133",
+          "annex_IV_part_1",
+          "article_50_part_1"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 1,
+        "top": [
+          "article_2_part_1",
+          "article_74_part_1",
+          "article_43_part_2",
+          "intro_98",
+          "intro_97",
+          "intro_224",
+          "article_80_part_2",
+          "article_60_part_1",
+          "intro_29",
+          "article_2_part_2"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "intro_150",
+          "intro_124",
+          "intro_131",
+          "intro_16",
+          "article_26_part_1",
+          "intro_85",
+          "article_53_part_2",
+          "intro_28",
+          "article_55"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "intro_41",
+          "intro_80",
+          "intro_165",
+          "intro_175",
+          "article_40_part_1",
+          "intro_44",
+          "intro_95",
+          "article_42",
+          "article_75",
+          "article_73_part_3"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 1,
+        "top": [
+          "article_6_part_2",
+          "article_6_part_1",
+          "article_7_part_1",
+          "intro_76",
+          "article_7_part_3",
+          "article_43_part_2",
+          "article_60_part_1",
+          "intro_231",
+          "intro_80",
+          "intro_79"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 2,
+        "top": [
+          "intro_101",
+          "annex_III_part_2",
+          "intro_76",
+          "article_6_part_2",
+          "intro_82",
+          "intro_79",
+          "article_26_part_3",
+          "intro_156",
+          "intro_102",
+          "article_3_def_63"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 9,
+        "top": [
+          "intro_103",
+          "intro_102",
+          "article_17_part_1",
+          "article_10_part_1",
+          "article_10_part_4",
+          "intro_105",
+          "annex_XIII",
+          "intro_108",
+          "article_10_part_2",
+          "article_9_part_2"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 2,
+        "top": [
+          "article_14_part_2",
+          "article_14_part_1",
+          "intro_207",
+          "article_75",
+          "intro_69",
+          "article_14_part_3",
+          "intro_109",
+          "article_6_part_2",
+          "intro_111",
+          "intro_131"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "intro_109",
+          "article_25_part_1",
+          "intro_100",
+          "intro_76",
+          "intro_101",
+          "intro_157",
+          "article_6_part_1",
+          "article_17_part_1",
+          "article_75",
+          "article_14_part_2"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 4,
+        "top": [
+          "intro_89",
+          "intro_6",
+          "intro_136",
+          "article_27_part_1",
+          "intro_86",
+          "article_7_part_2",
+          "intro_207",
+          "intro_70",
+          "intro_224",
+          "article_77"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 2,
+        "top": [
+          "intro_39",
+          "article_50_part_1",
+          "intro_6",
+          "article_14_part_1",
+          "article_6_part_2",
+          "intro_42",
+          "article_13_part_2",
+          "intro_131",
+          "article_75",
+          "intro_38"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": null,
+        "top": [
+          "intro_156",
+          "intro_140",
+          "article_52_part_1",
+          "article_52_part_2",
+          "article_55",
+          "intro_157",
+          "intro_155",
+          "intro_159",
+          "intro_160",
+          "intro_154"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 1,
+        "top": [
+          "article_53_part_1",
+          "intro_142",
+          "article_54_part_2",
+          "intro_139",
+          "article_53_part_2",
+          "annex_XI_part_1",
+          "intro_216",
+          "intro_149",
+          "intro_145",
+          "annex_XI_part_2"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 3,
+        "top": [
+          "intro_185",
+          "article_3_def_55",
+          "article_57_part_1",
+          "article_57_part_2",
+          "article_58_part_2",
+          "article_57_part_4",
+          "article_58_part_1",
+          "article_57_part_5",
+          "article_57_part_3",
+          "intro_188"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_2",
+          "intro_205",
+          "article_73_part_3",
+          "article_26_part_2",
+          "article_3_def_49",
+          "intro_109",
+          "article_80_part_1",
+          "article_60_part_4",
+          "intro_108"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 2,
+        "top": [
+          "intro_224",
+          "article_86",
+          "article_5_part_1",
+          "article_7_part_2",
+          "intro_76",
+          "intro_17",
+          "intro_16",
+          "article_3_def_1",
+          "article_3_def_56",
+          "intro_42"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "article_5_part_1",
+          "article_101_part_1",
+          "intro_207",
+          "article_56_part_3",
+          "intro_101",
+          "article_57_part_4",
+          "intro_145",
+          "article_89",
+          "intro_163",
+          "intro_223"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "intro_232",
+          "intro_207",
+          "intro_44",
+          "article_5_part_1",
+          "intro_41",
+          "article_111",
+          "intro_231",
+          "article_74_part_1",
+          "intro_233",
+          "article_96"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": 3,
+        "top": [
+          "intro_158",
+          "intro_144",
+          "intro_143",
+          "intro_145",
+          "article_54_part_2",
+          "intro_130",
+          "article_53_part_2",
+          "article_89",
+          "intro_139",
+          "intro_140"
+        ]
+      }
+    ],
+    "hybrid_binding_only": [
+      {
+        "id": "q01",
+        "gold": "article_3_def_1",
+        "rank": null,
+        "top": [
+          "article_3_def_66",
+          "annex_V",
+          "article_2_part_1",
+          "article_75",
+          "annex_IV_part_2",
+          "article_49",
+          "annex_III_part_3",
+          "article_6_part_1",
+          "article_40_part_2",
+          "article_7_part_2"
+        ]
+      },
+      {
+        "id": "q02",
+        "gold": "article_3_def_4",
+        "rank": 1,
+        "top": [
+          "article_3_def_4",
+          "article_13_part_1",
+          "article_25_part_1",
+          "annex_IV_part_1",
+          "article_50_part_1",
+          "article_26_part_2",
+          "annex_VIII_part_4",
+          "article_62_part_2",
+          "article_3_def_55",
+          "article_14_part_1"
+        ]
+      },
+      {
+        "id": "q03",
+        "gold": "article_2_part_1",
+        "rank": 1,
+        "top": [
+          "article_2_part_1",
+          "article_74_part_1",
+          "article_43_part_2",
+          "article_2_part_2",
+          "article_2_part_3",
+          "article_60_part_1",
+          "article_80_part_2",
+          "article_79_part_2",
+          "annex_V",
+          "article_75"
+        ]
+      },
+      {
+        "id": "q04",
+        "gold": "article_4",
+        "rank": 1,
+        "top": [
+          "article_4",
+          "article_92_part_1",
+          "article_2_part_1",
+          "article_53_part_2",
+          "article_3_def_55",
+          "article_26_part_1",
+          "article_50_part_1",
+          "article_53_part_1",
+          "article_26_part_3",
+          "article_2_part_3"
+        ]
+      },
+      {
+        "id": "q05",
+        "gold": "article_5_part_1",
+        "rank": null,
+        "top": [
+          "article_40_part_1",
+          "article_42",
+          "article_49",
+          "article_75",
+          "article_2_part_3",
+          "article_26_part_5",
+          "article_73_part_3",
+          "article_108",
+          "annex_VIII_part_4",
+          "article_71_part_1"
+        ]
+      },
+      {
+        "id": "q06",
+        "gold": "article_6_part_2",
+        "rank": 1,
+        "top": [
+          "article_6_part_2",
+          "article_6_part_1",
+          "article_7_part_1",
+          "article_43_part_2",
+          "article_7_part_3",
+          "article_60_part_1",
+          "article_49",
+          "article_43_part_1",
+          "article_111",
+          "annex_III_part_5"
+        ]
+      },
+      {
+        "id": "q07",
+        "gold": "annex_III_part_2",
+        "rank": 1,
+        "top": [
+          "annex_III_part_2",
+          "article_6_part_2",
+          "article_6_part_1",
+          "article_9_part_1",
+          "article_14_part_2",
+          "article_26_part_3",
+          "article_75",
+          "article_13_part_2",
+          "annex_III_part_1",
+          "annex_VIII_part_3"
+        ]
+      },
+      {
+        "id": "q08",
+        "gold": "article_10_part_2",
+        "rank": 5,
+        "top": [
+          "article_17_part_1",
+          "article_10_part_1",
+          "article_10_part_4",
+          "annex_XIII",
+          "article_10_part_2",
+          "article_9_part_2",
+          "annex_XI_part_2",
+          "article_15_part_2",
+          "article_8",
+          "article_16"
+        ]
+      },
+      {
+        "id": "q09",
+        "gold": "article_14_part_1",
+        "rank": 2,
+        "top": [
+          "article_14_part_2",
+          "article_14_part_1",
+          "article_75",
+          "article_14_part_3",
+          "article_6_part_2",
+          "article_21",
+          "article_9_part_1",
+          "article_74_part_4",
+          "article_6_part_1",
+          "annex_IV_part_3"
+        ]
+      },
+      {
+        "id": "q10",
+        "gold": "article_26_part_1",
+        "rank": null,
+        "top": [
+          "article_25_part_1",
+          "article_6_part_1",
+          "article_17_part_1",
+          "article_75",
+          "article_14_part_2",
+          "article_20",
+          "article_24_part_1",
+          "article_16",
+          "article_2_part_1",
+          "article_80_part_1"
+        ]
+      },
+      {
+        "id": "q11",
+        "gold": "article_27_part_1",
+        "rank": 1,
+        "top": [
+          "article_27_part_1",
+          "article_7_part_2",
+          "article_77",
+          "article_14_part_1",
+          "article_86",
+          "article_7_part_1",
+          "article_82",
+          "article_2_part_3",
+          "article_111",
+          "article_79_part_2"
+        ]
+      },
+      {
+        "id": "q12",
+        "gold": "article_50_part_1",
+        "rank": 1,
+        "top": [
+          "article_50_part_1",
+          "article_14_part_1",
+          "article_6_part_2",
+          "article_13_part_2",
+          "article_75",
+          "article_5_part_1",
+          "article_50_part_2",
+          "article_42",
+          "article_14_part_2",
+          "article_14_part_3"
+        ]
+      },
+      {
+        "id": "q13",
+        "gold": "article_51",
+        "rank": 4,
+        "top": [
+          "article_52_part_1",
+          "article_52_part_2",
+          "article_55",
+          "article_51",
+          "article_90",
+          "article_93",
+          "article_3_def_65",
+          "article_92_part_1",
+          "annex_XI_part_1",
+          "article_54_part_2"
+        ]
+      },
+      {
+        "id": "q14",
+        "gold": "article_53_part_1",
+        "rank": 1,
+        "top": [
+          "article_53_part_1",
+          "article_54_part_2",
+          "annex_XI_part_1",
+          "article_53_part_2",
+          "annex_XI_part_2",
+          "article_55",
+          "annex_XII",
+          "annex_XI_part_3",
+          "article_101_part_1",
+          "article_101_part_2"
+        ]
+      },
+      {
+        "id": "q15",
+        "gold": "article_57_part_1",
+        "rank": 2,
+        "top": [
+          "article_3_def_55",
+          "article_57_part_1",
+          "article_58_part_2",
+          "article_57_part_2",
+          "article_57_part_4",
+          "article_57_part_5",
+          "article_58_part_1",
+          "article_57_part_3",
+          "article_59_part_1",
+          "article_62_part_1"
+        ]
+      },
+      {
+        "id": "q16",
+        "gold": "article_73_part_1",
+        "rank": 1,
+        "top": [
+          "article_73_part_1",
+          "article_73_part_2",
+          "article_73_part_3",
+          "article_26_part_2",
+          "article_3_def_49",
+          "article_80_part_1",
+          "article_60_part_4",
+          "article_60_part_3",
+          "article_14_part_1",
+          "article_55"
+        ]
+      },
+      {
+        "id": "q17",
+        "gold": "article_86",
+        "rank": 1,
+        "top": [
+          "article_86",
+          "article_5_part_1",
+          "article_7_part_2",
+          "article_3_def_1",
+          "article_3_def_56",
+          "article_51",
+          "article_6_part_2",
+          "article_3_def_66",
+          "article_75",
+          "article_13_part_2"
+        ]
+      },
+      {
+        "id": "q18",
+        "gold": "article_99_part_1",
+        "rank": null,
+        "top": [
+          "article_101_part_1",
+          "article_5_part_1",
+          "article_56_part_3",
+          "article_57_part_4",
+          "article_53_part_2",
+          "article_89",
+          "article_55",
+          "article_1",
+          "article_6_part_2",
+          "article_7_part_2"
+        ]
+      },
+      {
+        "id": "q19",
+        "gold": "article_113",
+        "rank": null,
+        "top": [
+          "article_5_part_1",
+          "article_74_part_1",
+          "article_111",
+          "article_96",
+          "article_99_part_1",
+          "article_1",
+          "article_2_part_3",
+          "article_66",
+          "article_43_part_2",
+          "article_81_part_1"
+        ]
+      },
+      {
+        "id": "q20",
+        "gold": "intro_143",
+        "rank": null,
+        "top": [
+          "article_54_part_2",
+          "article_53_part_2",
+          "article_89",
+          "article_53_part_3",
+          "article_55",
+          "article_92_part_1",
+          "annex_XI_part_1",
+          "article_53_part_1",
+          "article_1",
+          "article_2_part_1"
+        ]
+      }
+    ]
+  }
+}
